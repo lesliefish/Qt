@@ -1,0 +1,123 @@
+QWidget#SadpWindow
+{
+    border: 1px solid rgb(50, 50, 50);
+    background: rgb(50, 50, 50);
+}
+QWidget#m_titlelWidget
+{
+    border: 1px solid transparent;
+	border-radius: 1px;
+	min-height : 3em;
+    background:#3B3B3B;
+}
+
+QPushButton
+{
+	color:white;
+	background:transparent;
+	border-radius: 10px;
+	font: 12px;
+	/*min-width: 6em;*/
+	padding: 6px;
+}
+
+QPushButton#m_forgotBtn
+{
+	color:#5CACEE;
+	background:transparent;
+	border-radius: 10px;
+	font: 12px;
+	/*min-width: 6em;*/
+	padding: 6px;
+}
+
+QPushButton#refreshBtn
+{
+	color:white;
+	background:red;
+	border-radius: 4px;
+	font: 12px;
+	padding: 6px;
+}
+QPushButton#modifyBtn
+{
+	color:white;
+	background:red;
+	border-radius: 4px;
+	font: 12px;
+	/*min-width: 6em;*/
+	padding: 6px;
+}
+
+QPushButton#exportExcelBtn
+{
+	color:white;
+	background:red;
+	border-radius: 4px;
+	font: 12px;
+	padding: 6px;
+}
+
+QPushButton#frogotBtn
+{
+	color:rgb(0, 120, 230);
+	background:white;
+	border-radius: 4px;
+	font: 12px;
+	min-width: 6em;
+	padding: 6px;
+}
+
+QTableWidget
+{
+	color:white;
+    border: 1px solid rgb(45, 45, 45);
+	background: rgb(57, 58, 60);
+	gridline-color: rgb(60, 60, 60);
+}
+
+/*设置表头属性*/
+QTableWidget QHeaderView::section
+{
+    font-size: 12px;
+	background:black;
+    background-color:#000000;
+    color:white;
+    padding-left:4px;
+    border:1px solid red;   /*表头边框线的宽度、颜色*/
+    /*border:1px solid gray;*/
+}
+
+QGroupBox 
+{ 
+	color:white;
+    font-size: 12px;
+    border:none;
+    margin-top: 10px;
+}
+
+QLabel
+{
+    border:none;
+	color:white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+QCheckBox
+{
+    border:none;
+	color:white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+QScrollBar:horizontal
+{ 
+	background:black;
+	color:white;
+	height:12px; 
+	border:1px solid black; 
+	margin:0px,0px,0px,0px; 
+	padding-left:15px; 
+	padding-right:15px; 
+ } 
