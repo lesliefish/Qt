@@ -1,0 +1,8 @@
+
+*.o
+*.exe
+QSS/build-QPushButtonQss-Desktop_Qt_5_6_0_MinGW_32bit-Debug/Makefile
+QSS/build-QPushButtonQss-Desktop_Qt_5_6_0_MinGW_32bit-Debug/Makefile.Debug
+QSS/build-QPushButtonQss-Desktop_Qt_5_6_0_MinGW_32bit-Debug/Makefile.Release
+QSS/build-QPushButtonQss-Desktop_Qt_5_6_0_MinGW_32bit-Debug/debug/moc_dialog.cpp
+QSS/QPushButtonQss/QPushButtonQss.pro.user
