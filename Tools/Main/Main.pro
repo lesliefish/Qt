@@ -24,3 +24,6 @@ FORMS    += \
 
 DISTFILES += \
     main.qss
+
+RESOURCES += \
+    res/main.qrc

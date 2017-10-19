@@ -50,34 +50,27 @@ background:#999999;
 
 QPushButton#m_maxBtn
 {
+border:none;
 color: #999999;
 border-radius:1px;
 font: bold 14px;
 padding: 6px;
+border-image: url(:/Title/Button/images/resize.svg);
 }
 
 QPushButton#m_maxBtn:hover
 {
 color: white;
 background:#999999;
+border-image: url(:/Title/Button/images/max.png);
 }
 
-
-QPushButton#onlineTextBtn
+QPushButton#m_appNameBtn
 {
-    color:red;
-    border-radius: 4px;
-    font: 16px;
-    padding: 6px;
-}
-QPushButton#frogotBtn
-{
-    color:rgb(0, 120, 230);
-    background:white;
-    border-radius: 4px;
-    font: 12px;
-    min-width: 6em;
-    padding: 6px;
+color: #999999;
+border-radius:1px;
+font: 12px;
+padding: 6px;
 }
 
 QTableWidget

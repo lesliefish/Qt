@@ -12,3 +12,4 @@ Tools/Main/Makefile.Debug
 Tools/Main/Makefile.Release
 Tools/Main/Makefile
 Tools/Main/debug/moc_mainwindow.cpp
+Tools/Main/debug/qrc_main.cpp

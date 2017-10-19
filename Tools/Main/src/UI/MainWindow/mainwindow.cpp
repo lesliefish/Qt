@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QFile>
 #include <QDir>
+#include <QMouseEvent>
 
 MainWindow::MainWindow(QWidget *parent) :
     QWidget(parent),
@@ -40,4 +41,29 @@ void MainWindow::InitConnect()
             this->showMaximized();
     }
     );
+}
+
+
+void MainWindow::mousePressEvent(QMouseEvent *event)
+{
+    if (event->button() == Qt::LeftButton)
+    {
+        this->setMouseTracking(true);
+        m_bMouseIsPressed = true;
+        m_pointMove = event->pos();
+    }
+}
+
+void MainWindow::mouseReleaseEvent(QMouseEvent *event)
+{
+    m_bMouseIsPressed = false;
+}
+
+void MainWindow::mouseMoveEvent(QMouseEvent *event)
+{
+    if (m_bMouseIsPressed)
+    {
+        QPoint pointPos = event->globalPos();
+        this->move(pointPos - m_pointMove);
+    }
 }

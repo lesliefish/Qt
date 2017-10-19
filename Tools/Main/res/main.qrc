@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Title/Button">
+        <file>images/resize.svg</file>
+    </qresource>
+</RCC>

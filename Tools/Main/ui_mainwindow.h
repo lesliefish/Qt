@@ -43,8 +43,8 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(800, 600);
-        MainWindow->setMinimumSize(QSize(800, 600));
+        MainWindow->resize(400, 300);
+        MainWindow->setMinimumSize(QSize(400, 300));
         MainWindow->setMaximumSize(QSize(1920, 1200));
         gridLayout_2 = new QGridLayout(MainWindow);
         gridLayout_2->setSpacing(0);
@@ -133,7 +133,7 @@ public:
 #ifndef QT_NO_TOOLTIP
         m_maxBtn->setToolTip(QApplication::translate("MainWindow", "Maximize", 0));
 #endif // QT_NO_TOOLTIP
-        m_maxBtn->setText(QApplication::translate("MainWindow", "2", 0));
+        m_maxBtn->setText(QString());
 #ifndef QT_NO_TOOLTIP
         m_closeBtn->setToolTip(QApplication::translate("MainWindow", "Close", 0));
 #endif // QT_NO_TOOLTIP
