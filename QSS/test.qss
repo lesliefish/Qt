@@ -39,6 +39,16 @@ QPushButton#refreshBtn
 	font: 12px;
 	padding: 6px;
 }
+
+QPushButton#m_closeBtn
+{
+	color:white;
+	background:red;
+	border-radius: 4px;
+	font: 14px;
+	padding: 6px;
+}
+
 QPushButton#modifyBtn
 {
 	color:white;
@@ -57,7 +67,13 @@ QPushButton#exportExcelBtn
 	font: 12px;
 	padding: 6px;
 }
-
+QPushButton#onlineTextBtn
+{
+	color:red;
+	border-radius: 4px;
+	font: 16px;
+	padding: 6px;
+}
 QPushButton#frogotBtn
 {
 	color:rgb(0, 120, 230);
