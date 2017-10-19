@@ -1,14 +1,13 @@
-QWidget#MainWindow
+QWidget#m_mainWidget
 {
-    border: 1px solid rgb(50, 50, 50);
-    background: rgb(50, 50, 50);
-}
-QWidget#m_MainWidget
-{
-    border: 1px solid transparent;
+    border: 1px solid #062231;
     border-radius: 1px;
-    min-height : 3em;
-    background:#3B3B3B;
+    background:#e6e6e6;
+}
+
+QWidget#m_titleWidget
+{
+    background:#062231;
 }
 
 QPushButton
@@ -19,6 +18,7 @@ QPushButton
     font: 12px;
     /*min-width: 6em;*/
     padding: 6px;
+    font-family:寰蒋闆呴粦;
 }
 
 QPushButton#m_closeBtn
@@ -27,102 +27,64 @@ color: #999999;
 border-radius:1px;
 font: bold 14px;
 padding: 6px;
+background-image:url(:/Title/Button/images/close.png);
+background-repeat:no-repeat;
+background-position:center;
 }
 QPushButton#m_closeBtn:hover
 {
-color: white;
 background:red;
+background-image:url(:/Title/Button/images/close.png);
+background-repeat:no-repeat;
+background-position:center;
 }
 
 QPushButton#m_minBtn
 {
-color: #999999;
 border-radius:1px;
 font: bold 14px;
 padding: 6px;
+background-image:url(:/Title/Button/images/min.png);
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
 }
 
 QPushButton#m_minBtn:hover
 {
-color: white;
 background:#999999;
+background-image:url(:/Title/Button/images/min.png);
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
 }
 
 QPushButton#m_maxBtn
 {
 border:none;
-color: #999999;
 border-radius:1px;
 font: bold 14px;
-padding: 6px;
-border-image: url(:/Title/Button/images/resize.svg);
+background-image:url(:/Title/Button/images/max.png);
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
+background-clip:padding;
 }
 
 QPushButton#m_maxBtn:hover
 {
-color: white;
 background:#999999;
-border-image: url(:/Title/Button/images/max.png);
+background-image:url(:/Title/Button/images/max.png);
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
 }
 
 QPushButton#m_appNameBtn
 {
-color: #999999;
+color: #e6e6e6;
 border-radius:1px;
 font: 12px;
 padding: 6px;
 }
 
-QTableWidget
-{
-    color:white;
-    border: 1px solid rgb(45, 45, 45);
-    background: rgb(57, 58, 60);
-    gridline-color: rgb(60, 60, 60);
-}
-
-/*设置表头属性*/
-QTableWidget QHeaderView::section
-{
-    font-size: 12px;
-	background:black;
-    background-color:#000000;
-    color:white;
-    padding-left:4px;
-    border:1px solid red;   /*表头边框线的宽度、颜色*/
-    /*border:1px solid gray;*/
-}
-
-QGroupBox 
-{ 
-    color:white;
-    font-size: 12px;
-    border:none;
-    margin-top: 10px;
-}
-
-QLabel
-{
-    border:none;
-    color:white;
-    font-size: 12px;
-    margin-top: 10px;
-}
-QCheckBox
-{
-    border:none;
-    color:white;
-    font-size: 12px;
-    margin-top: 10px;
-}
-
-QScrollBar:horizontal
-{ 
-    background:black;
-    color:white;
-    height:12px;
-    border:1px solid black;
-    margin:0px,0px,0px,0px;
-    padding-left:15px;
-    padding-right:15px;
- } 

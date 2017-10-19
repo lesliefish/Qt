@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/Title/Button">
-        <file>images/resize.svg</file>
+        <file>images/max.png</file>
+        <file>images/close.png</file>
+        <file>images/min.png</file>
+        <file>images/normal.png</file>
     </qresource>
 </RCC>

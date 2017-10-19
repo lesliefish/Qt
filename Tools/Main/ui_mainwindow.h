@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.0
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -37,7 +37,7 @@ public:
     QPushButton *m_minBtn;
     QPushButton *m_maxBtn;
     QPushButton *m_closeBtn;
-    QWidget *m_MainWidget;
+    QWidget *m_mainWidget;
 
     void setupUi(QWidget *MainWindow)
     {
@@ -46,6 +46,10 @@ public:
         MainWindow->resize(400, 300);
         MainWindow->setMinimumSize(QSize(400, 300));
         MainWindow->setMaximumSize(QSize(1920, 1200));
+        QFont font;
+        font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font.setPointSize(11);
+        MainWindow->setFont(font);
         gridLayout_2 = new QGridLayout(MainWindow);
         gridLayout_2->setSpacing(0);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
@@ -85,6 +89,10 @@ public:
         m_minBtn->setObjectName(QStringLiteral("m_minBtn"));
         m_minBtn->setMinimumSize(QSize(44, 28));
         m_minBtn->setMaximumSize(QSize(44, 28));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("\345\256\213\344\275\223"));
+        font1.setPointSize(11);
+        m_minBtn->setFont(font1);
 
         gridLayout->addWidget(m_minBtn, 0, 0, 1, 1);
 
@@ -92,6 +100,9 @@ public:
         m_maxBtn->setObjectName(QStringLiteral("m_maxBtn"));
         m_maxBtn->setMinimumSize(QSize(44, 28));
         m_maxBtn->setMaximumSize(QSize(44, 28));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        m_maxBtn->setFont(font2);
 
         gridLayout->addWidget(m_maxBtn, 0, 1, 1, 1);
 
@@ -99,6 +110,7 @@ public:
         m_closeBtn->setObjectName(QStringLiteral("m_closeBtn"));
         m_closeBtn->setMinimumSize(QSize(44, 28));
         m_closeBtn->setMaximumSize(QSize(44, 28));
+        m_closeBtn->setFont(font1);
 
         gridLayout->addWidget(m_closeBtn, 0, 2, 1, 1);
 
@@ -108,10 +120,10 @@ public:
 
         verticalLayout->addWidget(m_titleWidget);
 
-        m_MainWidget = new QWidget(MainWindow);
-        m_MainWidget->setObjectName(QStringLiteral("m_MainWidget"));
+        m_mainWidget = new QWidget(MainWindow);
+        m_mainWidget->setObjectName(QStringLiteral("m_mainWidget"));
 
-        verticalLayout->addWidget(m_MainWidget);
+        verticalLayout->addWidget(m_mainWidget);
 
 
         gridLayout_2->addLayout(verticalLayout, 0, 0, 1, 1);
@@ -124,20 +136,20 @@ public:
 
     void retranslateUi(QWidget *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Form", 0));
-        m_appNameBtn->setText(QApplication::translate("MainWindow", "title", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Form", Q_NULLPTR));
+        m_appNameBtn->setText(QApplication::translate("MainWindow", "title", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        m_minBtn->setToolTip(QApplication::translate("MainWindow", "Minimize", 0));
+        m_minBtn->setToolTip(QApplication::translate("MainWindow", "Minimize", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        m_minBtn->setText(QApplication::translate("MainWindow", "\357\274\215", 0));
+        m_minBtn->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        m_maxBtn->setToolTip(QApplication::translate("MainWindow", "Maximize", 0));
+        m_maxBtn->setToolTip(QApplication::translate("MainWindow", "Maximize", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         m_maxBtn->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        m_closeBtn->setToolTip(QApplication::translate("MainWindow", "Close", 0));
+        m_closeBtn->setToolTip(QApplication::translate("MainWindow", "Close", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        m_closeBtn->setText(QApplication::translate("MainWindow", "\303\227", 0));
+        m_closeBtn->setText(QString());
     } // retranslateUi
 
 };

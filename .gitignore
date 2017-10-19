@@ -13,3 +13,7 @@ Tools/Main/Makefile.Release
 Tools/Main/Makefile
 Tools/Main/debug/moc_mainwindow.cpp
 Tools/Main/debug/qrc_main.cpp
+Tools/Main/.qmake.stash
+Tools/Main/release/moc_predefs.h
+Tools/Main/release/moc_mainwindow.cpp
+Tools/Main/release/qrc_main.cpp

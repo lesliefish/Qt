@@ -22,6 +22,12 @@
     <height>1200</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -134,11 +140,17 @@
               <height>28</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>宋体</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
             <property name="toolTip">
              <string>Minimize</string>
             </property>
             <property name="text">
-             <string>－</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -155,6 +167,11 @@
               <width>44</width>
               <height>28</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+             </font>
             </property>
             <property name="toolTip">
              <string>Maximize</string>
@@ -178,11 +195,17 @@
               <height>28</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>宋体</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
             <property name="toolTip">
              <string>Close</string>
             </property>
             <property name="text">
-             <string>×</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -192,7 +215,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QWidget" name="m_MainWidget" native="true"/>
+      <widget class="QWidget" name="m_mainWidget" native="true"/>
      </item>
     </layout>
    </item>

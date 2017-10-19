@@ -21,6 +21,8 @@ MainWindow::~MainWindow()
 void MainWindow::InitUI()
 {
     this->setWindowFlags(Qt::FramelessWindowHint);
+    this->setWindowTitle(tr("未来之歌"));
+    ui->m_appNameBtn->setText(tr("未来之歌"));
 
     QString stylePath = QDir::currentPath() + "/main.qss";
     QFile fileQss(stylePath);
@@ -33,14 +35,7 @@ void MainWindow::InitConnect()
 {
     connect(ui->m_closeBtn, &QPushButton::clicked, [=](){this->close();});
     connect(ui->m_minBtn, &QPushButton::clicked, [=](){this->showMinimized();});
-    connect(ui->m_maxBtn, &QPushButton::clicked, [=]()
-    {
-        if(this->isMaximized())
-            this->showNormal();
-        else
-            this->showMaximized();
-    }
-    );
+    connect(ui->m_maxBtn, &QPushButton::clicked, [=](){this->isMaximized() ? this->showNormal() : this->showMaximized();});
 }
 
 
