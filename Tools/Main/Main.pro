@@ -14,11 +14,12 @@ TEMPLATE = app
 INCLUDEPATH += src/UI\
     src/PublicGUI\
 
-SOURCES += main.cpp \
+SOURCES += \
     src/UI/MainWindow/mainwindow.cpp \
     src/PublicGUI/FramelessWidget/framelesswidget.cpp \
     src/UI/WarningDlg/warningdlg.cpp \
-    src/UI/About/aboutdlg.cpp
+    src/UI/About/aboutdlg.cpp \
+    src/main.cpp
 
 HEADERS  += \
     src/UI/MainWindow/mainwindow.h \

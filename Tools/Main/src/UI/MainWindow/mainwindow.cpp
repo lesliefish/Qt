@@ -23,7 +23,7 @@ void MainWindow::InitUI()
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setWindowTitle(ui->m_appNameBtn->text());
 
-    QString stylePath = QDir::currentPath() + "/main.qss";
+    QString stylePath = QDir::currentPath() + "/res/main.qss";
     QFile fileQss(stylePath);
     if(!fileQss.open(QFile::ReadOnly))
         return;
