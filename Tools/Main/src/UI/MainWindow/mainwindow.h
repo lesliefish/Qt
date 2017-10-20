@@ -2,12 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QWidget>
+#include "WarningDlg/warningdlg.h"
+#include "FramelessWidget/framelesswidget.h"
 
 namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QWidget
+class MainWindow : public FramelessWidget
 {
     Q_OBJECT
 
@@ -21,12 +23,8 @@ private:
 private:
     void InitUI();
     void InitConnect();
-    QPoint m_pointMove;
-    bool m_bMouseIsPressed;
-    //实现鼠标对无边框窗口拖动
-    void mousePressEvent(QMouseEvent *event);
-    void mouseReleaseEvent(QMouseEvent *event);
-    void mouseMoveEvent(QMouseEvent *event);
+    WarningDlg m_warningDlg;
+
 };
 
 #endif // MAINWINDOW_H

@@ -1,11 +1,11 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include <QFile>
 #include <QDir>
-#include <QMouseEvent>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
 
 MainWindow::MainWindow(QWidget *parent) :
-    QWidget(parent),
+    FramelessWidget(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
@@ -33,35 +33,11 @@ void MainWindow::InitUI()
 
 void MainWindow::InitConnect()
 {
-    connect(ui->m_closeBtn, &QPushButton::clicked, [=](){this->close();});
+    connect(ui->m_helpBtn, &QPushButton::clicked, [=](){this->close();});
     connect(ui->m_minBtn, &QPushButton::clicked, [=](){this->showMinimized();});
     connect(ui->m_maxBtn, &QPushButton::clicked, [=](){this->isMaximized() ? this->showNormal() : this->showMaximized();});
+    connect(ui->m_closeBtn, &QPushButton::clicked,[=](){m_warningDlg.exec();});
+    connect(&m_warningDlg, &WarningDlg::SigExit, [=](){this->close();});
 }
 
 
-void MainWindow::mousePressEvent(QMouseEvent *event)
-{
-    if (event->button() == Qt::LeftButton)
-    {
-        this->setMouseTracking(true);
-        m_bMouseIsPressed = true;
-        m_pointMove = event->pos();
-    }
-}
-
-void MainWindow::mouseReleaseEvent(QMouseEvent *event)
-{
-    m_bMouseIsPressed = false;
-}
-
-void MainWindow::mouseMoveEvent(QMouseEvent *event)
-{
-    //最大化时，禁止拖动
-    if(this->isMaximized())
-        return;
-    if (m_bMouseIsPressed)
-    {
-        QPoint pointPos = event->globalPos();
-        this->move(pointPos - m_pointMove);
-    }
-}

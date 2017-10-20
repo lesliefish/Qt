@@ -7,8 +7,9 @@ QWidget#m_mainWidget
 
 QWidget#m_titleWidget
 {
-    background:#222222;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #666666, stop: 0.1 #555555, stop: 0.49 #444444, stop: 0.5 #444444, stop: 1 #999999);
+    background:#1A1A1A;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #666666, stop: 0.1 #555555, stop: 0.49 #333333, stop: 0.5 #444444, stop: 1 #999999);
+    background:#1A1A1A;
 }
 
 QPushButton
@@ -26,7 +27,7 @@ QPushButton#m_closeBtn
 {
 color: #999999;
 border-radius:1px;
-font: bold 14px;
+font: bold 9px;
 padding: 6px;
 background-image:url(:/Title/Button/images/close.png);
 background-repeat:no-repeat;
@@ -43,7 +44,7 @@ background-position:center;
 QPushButton#m_minBtn
 {
 border-radius:1px;
-font: bold 14px;
+font: bold 9px;
 padding: 6px;
 background-image:url(:/Title/Button/images/min.png);
 background-repeat:no-repeat;
@@ -89,3 +90,7 @@ font: 12px;
 padding: 6px;
 }
 
+QWidget#m_warningDlg
+{
+background:red;
+}

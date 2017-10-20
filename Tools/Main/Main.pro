@@ -12,15 +12,22 @@ TARGET = Main
 TEMPLATE = app
 
 INCLUDEPATH += src/UI\
+    src/PublicGUI\
 
 SOURCES += main.cpp \
-    src/UI/MainWindow/mainwindow.cpp
+    src/UI/MainWindow/mainwindow.cpp \
+    src/PublicGUI/FramelessWidget/framelesswidget.cpp \
+    src/UI/WarningDlg/warningdlg.cpp
 
 HEADERS  += \
-    src/UI/MainWindow/mainwindow.h
+    src/UI/MainWindow/mainwindow.h \
+    src/PublicGUI/FramelessWidget/framelesswidget.h \
+    src/UI/WarningDlg/warningdlg.h
 
 FORMS    += \
-    src/UI/MainWindow/mainwindow.ui
+    src/UI/MainWindow/mainwindow.ui \
+    src/PublicGUI/FramelessWidget/framelesswidget.ui \
+    src/UI/WarningDlg/warningdlg.ui
 
 DISTFILES += \
     main.qss
