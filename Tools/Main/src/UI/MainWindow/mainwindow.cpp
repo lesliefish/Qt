@@ -21,8 +21,8 @@ MainWindow::~MainWindow()
 void MainWindow::InitUI()
 {
     this->setWindowFlags(Qt::FramelessWindowHint);
-    this->setWindowTitle(tr("未来之歌"));
-    ui->m_appNameBtn->setText(tr("未来之歌"));
+    this->setWindowTitle(tr("title"));
+    ui->m_appNameBtn->setText(tr("title"));
 
     QString stylePath = QDir::currentPath() + "/main.qss";
     QFile fileQss(stylePath);
@@ -56,6 +56,9 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
+    //最大化时，禁止拖动
+    if(this->isMaximized())
+        return;
     if (m_bMouseIsPressed)
     {
         QPoint pointPos = event->globalPos();

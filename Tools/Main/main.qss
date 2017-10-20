@@ -2,12 +2,12 @@ QWidget#m_mainWidget
 {
     border: 1px solid #062231;
     border-radius: 1px;
-    background:#e6e6e6;
+    background:#EEEEEE;
 }
 
 QWidget#m_titleWidget
 {
-    background:#062231;
+    background:#222222;
 }
 
 QPushButton
