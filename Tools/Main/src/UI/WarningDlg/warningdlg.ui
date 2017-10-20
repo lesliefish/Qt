@@ -140,6 +140,12 @@ border-radius: 1px;
             <height>28</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">QPushButton#m_titleTextBtn
 {
@@ -154,7 +160,7 @@ QPushButton#m_titleTextBtn:hover
 }</string>
           </property>
           <property name="text">
-           <string>Warning</string>
+           <string>提示</string>
           </property>
          </widget>
         </item>
@@ -232,8 +238,14 @@ background-position:center;
      </item>
      <item>
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>Are you sure to quit?</string>
+        <string>关闭软件？</string>
        </property>
       </widget>
      </item>
@@ -315,6 +327,15 @@ background-position:center;
            <height>25</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton#m_OKBtn
 {
@@ -322,6 +343,7 @@ background: red;
 color:white;
 border-radius:1px;
 font: 12px;
+font-family:微软雅黑;
 padding: 6px;
 background-repeat:no-repeat;
 background-position:center;
@@ -332,7 +354,7 @@ QPushButton#m_OKBtn:hover
 }</string>
          </property>
          <property name="text">
-          <string>OK</string>
+          <string>确定</string>
          </property>
         </widget>
        </item>
@@ -366,6 +388,15 @@ QPushButton#m_OKBtn:hover
            <height>25</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton#m_cancleBtn
 {
@@ -373,6 +404,7 @@ background: #999999;
 color:white;
 border-radius:1px;
 font: 12px;
+font-family:微软雅黑;
 padding: 6px;
 background-repeat:no-repeat;
 background-position:center;
@@ -383,7 +415,7 @@ QPushButton#m_cancleBtn:hover
 }</string>
          </property>
          <property name="text">
-          <string>Cancel</string>
+          <string>取消</string>
          </property>
         </widget>
        </item>

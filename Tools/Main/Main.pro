@@ -17,17 +17,20 @@ INCLUDEPATH += src/UI\
 SOURCES += main.cpp \
     src/UI/MainWindow/mainwindow.cpp \
     src/PublicGUI/FramelessWidget/framelesswidget.cpp \
-    src/UI/WarningDlg/warningdlg.cpp
+    src/UI/WarningDlg/warningdlg.cpp \
+    src/UI/About/aboutdlg.cpp
 
 HEADERS  += \
     src/UI/MainWindow/mainwindow.h \
     src/PublicGUI/FramelessWidget/framelesswidget.h \
-    src/UI/WarningDlg/warningdlg.h
+    src/UI/WarningDlg/warningdlg.h \
+    src/UI/About/aboutdlg.h
 
 FORMS    += \
     src/UI/MainWindow/mainwindow.ui \
     src/PublicGUI/FramelessWidget/framelesswidget.ui \
-    src/UI/WarningDlg/warningdlg.ui
+    src/UI/WarningDlg/warningdlg.ui \
+    src/UI/About/aboutdlg.ui
 
 DISTFILES += \
     main.qss

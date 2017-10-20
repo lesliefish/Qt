@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "WarningDlg/warningdlg.h"
 #include "FramelessWidget/framelesswidget.h"
+#include "About/aboutdlg.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +25,7 @@ private:
     void InitUI();
     void InitConnect();
     WarningDlg m_warningDlg;
+    AboutDlg m_aboutDlg;
 
 };
 

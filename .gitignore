@@ -21,3 +21,8 @@ Tools/Main/debug/moc_warningdlg.cpp
 Tools/Main/debug/moc_framelesswidget.cpp
 Tools/Main/release/moc_framelesswidget.cpp
 Tools/Main/release/moc_warningdlg.cpp
+Tools/Main/object_script.Main.Debug
+*.Release
+Tools/Main/release/moc_aboutdlg.cpp
+Tools/Main/debug/moc_predefs.h
+Tools/Main/debug/moc_aboutdlg.cpp

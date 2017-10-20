@@ -21,8 +21,7 @@ MainWindow::~MainWindow()
 void MainWindow::InitUI()
 {
     this->setWindowFlags(Qt::FramelessWindowHint);
-    this->setWindowTitle(tr("title"));
-    ui->m_appNameBtn->setText(tr("title"));
+    this->setWindowTitle(ui->m_appNameBtn->text());
 
     QString stylePath = QDir::currentPath() + "/main.qss";
     QFile fileQss(stylePath);
@@ -33,11 +32,17 @@ void MainWindow::InitUI()
 
 void MainWindow::InitConnect()
 {
-    connect(ui->m_helpBtn, &QPushButton::clicked, [=](){;});
+    connect(ui->m_helpBtn, &QPushButton::clicked, [=](){m_aboutDlg.exec();});
     connect(ui->m_minBtn, &QPushButton::clicked, [=](){this->showMinimized();});
     connect(ui->m_maxBtn, &QPushButton::clicked, [=](){this->isMaximized() ? this->showNormal() : this->showMaximized();});
     connect(ui->m_closeBtn, &QPushButton::clicked,[=](){m_warningDlg.exec();});
-    connect(&m_warningDlg, &WarningDlg::SigExit, [=](){this->close();});
+    connect(&m_warningDlg, &WarningDlg::SigExit,
+            [=]()
+    {
+        if(!m_aboutDlg.isHidden())
+            m_aboutDlg.close();
+        this->close();
+    });
 }
 
 

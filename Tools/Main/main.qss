@@ -112,3 +112,10 @@ QWidget#m_warningDlg
 {
 background:red;
 }
+
+QWidget#m_aboutDlg
+{
+background:red;
+color: #e6e6e6;
+border-radius:1px;
+}
