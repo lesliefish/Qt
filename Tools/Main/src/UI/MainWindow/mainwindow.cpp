@@ -33,7 +33,7 @@ void MainWindow::InitUI()
 
 void MainWindow::InitConnect()
 {
-    connect(ui->m_helpBtn, &QPushButton::clicked, [=](){this->close();});
+    connect(ui->m_helpBtn, &QPushButton::clicked, [=](){;});
     connect(ui->m_minBtn, &QPushButton::clicked, [=](){this->showMinimized();});
     connect(ui->m_maxBtn, &QPushButton::clicked, [=](){this->isMaximized() ? this->showNormal() : this->showMaximized();});
     connect(ui->m_closeBtn, &QPushButton::clicked,[=](){m_warningDlg.exec();});

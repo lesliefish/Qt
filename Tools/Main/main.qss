@@ -41,6 +41,24 @@ background-repeat:no-repeat;
 background-position:center;
 }
 
+QPushButton#m_helpBtn
+{
+color: #999999;
+border-radius:1px;
+font: bold 9px;
+padding: 6px;
+background-image:url(:/Title/Button/images/help.png);
+background-repeat:no-repeat;
+background-position:center;
+}
+QPushButton#m_helpBtn:hover
+{
+background:#999999;
+background-image:url(:/Title/Button/images/help.png);
+background-repeat:no-repeat;
+background-position:center;
+}
+
 QPushButton#m_minBtn
 {
 border-radius:1px;

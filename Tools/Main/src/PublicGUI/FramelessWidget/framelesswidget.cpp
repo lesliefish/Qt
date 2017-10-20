@@ -31,6 +31,8 @@ void FramelessWidget::mousePressEvent(QMouseEvent *e)
 
 void FramelessWidget::mouseMoveEvent(QMouseEvent *e)
 {
+    if(this->isMaximized())
+        return;
     if (e->buttons() & Qt::LeftButton)
     {
         move(e->globalPos() - m_pointMove);

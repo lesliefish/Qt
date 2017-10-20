@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'warningdlg.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.0
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -28,7 +28,7 @@ class Ui_WarningDlg
 {
 public:
     QGridLayout *gridLayout_3;
-    QWidget *widget;
+    QWidget *m_warningTitle;
     QGridLayout *gridLayout;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_7;
@@ -71,11 +71,17 @@ public:
         gridLayout_3->setSpacing(0);
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
         gridLayout_3->setContentsMargins(0, 0, 0, 0);
-        widget = new QWidget(WarningDlg);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setMinimumSize(QSize(30, 28));
-        widget->setMaximumSize(QSize(500, 28));
-        gridLayout = new QGridLayout(widget);
+        m_warningTitle = new QWidget(WarningDlg);
+        m_warningTitle->setObjectName(QStringLiteral("m_warningTitle"));
+        m_warningTitle->setMinimumSize(QSize(30, 28));
+        m_warningTitle->setMaximumSize(QSize(500, 28));
+        m_warningTitle->setStyleSheet(QLatin1String("QWidget#m_warningTitle\n"
+"{\n"
+"background:transparent;\n"
+"border:1px solid rgb(120, 120, 120);\n"
+"border-radius: 1px;\n"
+"}"));
+        gridLayout = new QGridLayout(m_warningTitle);
         gridLayout->setSpacing(0);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -90,7 +96,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_6);
 
-        m_titleTextBtn = new QPushButton(widget);
+        m_titleTextBtn = new QPushButton(m_warningTitle);
         m_titleTextBtn->setObjectName(QStringLiteral("m_titleTextBtn"));
         m_titleTextBtn->setMinimumSize(QSize(40, 28));
         m_titleTextBtn->setMaximumSize(QSize(16777215, 28));
@@ -112,7 +118,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        m_closeBtn = new QPushButton(widget);
+        m_closeBtn = new QPushButton(m_warningTitle);
         m_closeBtn->setObjectName(QStringLiteral("m_closeBtn"));
         m_closeBtn->setMinimumSize(QSize(35, 28));
         m_closeBtn->setMaximumSize(QSize(35, 28));
@@ -141,7 +147,7 @@ public:
         gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
 
 
-        gridLayout_3->addWidget(widget, 0, 0, 1, 1);
+        gridLayout_3->addWidget(m_warningTitle, 0, 0, 1, 1);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
@@ -246,12 +252,12 @@ public:
 
     void retranslateUi(QDialog *WarningDlg)
     {
-        WarningDlg->setWindowTitle(QApplication::translate("WarningDlg", "Dialog", 0));
-        m_titleTextBtn->setText(QApplication::translate("WarningDlg", "Warning", 0));
-        m_closeBtn->setText(QApplication::translate("WarningDlg", "\303\227", 0));
-        label->setText(QApplication::translate("WarningDlg", "Are you sure to quit?", 0));
-        m_OKBtn->setText(QApplication::translate("WarningDlg", "OK", 0));
-        m_cancleBtn->setText(QApplication::translate("WarningDlg", "Cancel", 0));
+        WarningDlg->setWindowTitle(QApplication::translate("WarningDlg", "Dialog", Q_NULLPTR));
+        m_titleTextBtn->setText(QApplication::translate("WarningDlg", "Warning", Q_NULLPTR));
+        m_closeBtn->setText(QApplication::translate("WarningDlg", "\303\227", Q_NULLPTR));
+        label->setText(QApplication::translate("WarningDlg", "Are you sure to quit?", Q_NULLPTR));
+        m_OKBtn->setText(QApplication::translate("WarningDlg", "OK", Q_NULLPTR));
+        m_cancleBtn->setText(QApplication::translate("WarningDlg", "Cancel", Q_NULLPTR));
     } // retranslateUi
 
 };

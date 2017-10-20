@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.0
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -149,22 +149,22 @@ public:
 
     void retranslateUi(QWidget *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Form", 0));
-        m_appNameBtn->setText(QApplication::translate("MainWindow", "title", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Form", Q_NULLPTR));
+        m_appNameBtn->setText(QApplication::translate("MainWindow", "title", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        m_helpBtn->setToolTip(QApplication::translate("MainWindow", "Help", 0));
+        m_helpBtn->setToolTip(QApplication::translate("MainWindow", "Help", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        m_helpBtn->setText(QApplication::translate("MainWindow", "?", 0));
+        m_helpBtn->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        m_minBtn->setToolTip(QApplication::translate("MainWindow", "Minimize", 0));
+        m_minBtn->setToolTip(QApplication::translate("MainWindow", "Minimize", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         m_minBtn->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        m_maxBtn->setToolTip(QApplication::translate("MainWindow", "Maximize", 0));
+        m_maxBtn->setToolTip(QApplication::translate("MainWindow", "Maximize", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         m_maxBtn->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        m_closeBtn->setToolTip(QApplication::translate("MainWindow", "Close", 0));
+        m_closeBtn->setToolTip(QApplication::translate("MainWindow", "Close", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         m_closeBtn->setText(QString());
     } // retranslateUi

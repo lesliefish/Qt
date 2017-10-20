@@ -19,3 +19,5 @@ Tools/Main/release/moc_mainwindow.cpp
 Tools/Main/release/qrc_main.cpp
 Tools/Main/debug/moc_warningdlg.cpp
 Tools/Main/debug/moc_framelesswidget.cpp
+Tools/Main/release/moc_framelesswidget.cpp
+Tools/Main/release/moc_warningdlg.cpp

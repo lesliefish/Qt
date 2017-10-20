@@ -55,7 +55,7 @@ border-radius: 1px;
     <number>0</number>
    </property>
    <item row="0" column="0">
-    <widget class="QWidget" name="widget" native="true">
+    <widget class="QWidget" name="m_warningTitle" native="true">
      <property name="minimumSize">
       <size>
        <width>30</width>
@@ -67,6 +67,14 @@ border-radius: 1px;
        <width>500</width>
        <height>28</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget#m_warningTitle
+{
+background:transparent;
+border:1px solid rgb(120, 120, 120);
+border-radius: 1px;
+}</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <property name="leftMargin">

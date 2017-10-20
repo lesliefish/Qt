@@ -6,6 +6,7 @@ WarningDlg::WarningDlg(QWidget *parent) :
     ui(new Ui::WarningDlg)
 {
     ui->setupUi(this);
+    this->setWindowTitle(ui->m_titleTextBtn->text().trimmed());
     this->setWindowFlags(Qt::FramelessWindowHint);
     connect(ui->m_closeBtn, &QPushButton::clicked,[=](){this->close();});
     connect(ui->m_cancleBtn,&QPushButton::clicked,[=](){this->close();});
@@ -21,4 +22,21 @@ void WarningDlg::Exit()
 {
     this->close();
     emit SigExit();
+}
+void WarningDlg::mousePressEvent(QMouseEvent *e)
+{
+    if (e->button() == Qt::LeftButton)
+    {
+        m_pointMove = e->globalPos() - pos();
+        e->accept();
+    }
+}
+
+void WarningDlg::mouseMoveEvent(QMouseEvent *e)
+{
+    if (e->buttons() & Qt::LeftButton)
+    {
+        move(e->globalPos() - m_pointMove);
+        e->accept();
+    }
 }
