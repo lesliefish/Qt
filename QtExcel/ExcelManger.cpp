@@ -11,7 +11,6 @@ ExcelManger::ExcelManger(QObject *parent) : QObject(parent)
 {
     // 在后台线程中使用QAxObject必须先初始化
     CoInitializeEx(NULL, COINIT_MULTITHREADED);
-
 }
 
 bool ExcelManger::Test(QString &path)
@@ -22,46 +21,57 @@ bool ExcelManger::Test(QString &path)
     excel = new QAxObject("Excel.Application");
     excel->dynamicCall("SetVisible(bool)", true); //true 表示操作文件时可见，false表示为不可见
     workbooks = excel->querySubObject("WorkBooks");
-    //按文件路径打开文件
+
+
+    //————————————————按文件路径打开文件————————————————————
     workbook = workbooks->querySubObject("Open(QString&)", path);
-    QAxObject * worksheets = workbook->querySubObject("WorkSheets"); // 获取打开的excel文件中所有的工作sheet
+    // 获取打开的excel文件中所有的工作sheet
+    QAxObject * worksheets = workbook->querySubObject("WorkSheets");
 
-    //Excel文件中表的个数:
-    qDebug() << QString("Excel文件中表的个数: %1").arg(QString::number(worksheets->property("Count").toInt()));
 
-    // 获取第n个工作表 querySubObject("Item(int)", n);
-    QAxObject * worksheet = worksheets->querySubObject("Item(int)", 1);
+    //—————————————————Excel文件中表的个数:——————————————————
+    int iWorkSheet = worksheets->property("Count").toInt();
+    qDebug() << QString("Excel文件中表的个数: %1").arg(QString::number(iWorkSheet));
 
-    //获取该sheet的使用到的范围（可以理解为有数据的矩形区域）
+
+    // ————————————————获取第n个工作表 querySubObject("Item(int)", n);——————————
+    QAxObject * worksheet = worksheets->querySubObject("Item(int)", 1);//本例获取第一个，最后参数填1
+
+
+    //—————————获取该sheet的数据范围（可以理解为有数据的矩形区域）————
     QAxObject * usedrange = worksheet->querySubObject("UsedRange");
 
-    //获取行数
+    //———————————————————获取行数———————————————
     QAxObject * rows = usedrange->querySubObject("Rows");
-    qDebug() << QString("行数为: %1").arg(QString::number(rows->property("Count").toInt()));
+    int iRows = rows->property("Count").toInt();
+    qDebug() << QString("行数为: %1").arg(QString::number(iRows));
 
-    //获取列数
+    //————————————获取列数—————————
     QAxObject * columns = usedrange->querySubObject("Columns");
-    qDebug() << QString("列数为: %1").arg(QString::number(columns->property("Count").toInt()));
+    int iColumns = columns->property("Count").toInt();
+    qDebug() << QString("列数为: %1").arg(QString::number(iColumns));
 
-    //起始行
-    qDebug() << QString("起始行为: %1").arg(QString::number(rows->property("Row").toInt()));
-    //起始列
-    qDebug() << QString("起始列为: %1").arg(QString::number(columns->property("Column").toInt()));
+    //————————数据的起始行———
+    int iStartRow = rows->property("Row").toInt();
+    qDebug() << QString("起始行为: %1").arg(QString::number(iStartRow));
+
+    //————————数据的起始列————————————
+    int iColumn = columns->property("Column").toInt();
+    qDebug() << QString("起始列为: %1").arg(QString::numberiColumn());
 
 
-    //——————————————————————————————读数据——————————————————————————————————————————
+    //——————————————读出数据—————————————
     //获取第i行第j列的数据
     //假如是第6行，第6列 对应表中F列6行，即F6
     QAxObject *range1 = worksheet->querySubObject("Range(QString)", "F6");
-
     QString strRow6Col6 = "";
-    strRow6Col6 = range1->property("Value").toString();//QVariant(worksheet->querySubObject("Range(QString)", "F6")->property("Value")).toString();
+    strRow6Col6 = range1->property("Value").toString();
     qDebug() << "第6行，第6列的数据为：" + strRow6Col6;
 
     //待添加一个转换函数，即第6行，第6列，66转为F6
 
 
-    //——————————————————————————————写数据——————————————————————————————————————————
+    //—————————————写入数据—————————————
     //获取F6的位置
     QAxObject *range2 = worksheet->querySubObject("Range(QString)", "F6");
     //写入数据, 第6行，第6列
@@ -70,7 +80,7 @@ bool ExcelManger::Test(QString &path)
     newStr = range2->property("Value").toString();
     qDebug() << "写入数据后，第6行，第6列的数据为：" + newStr;
 
-    //!!!!!!!一定要记得close，不然系统进程里会出现n个EXCEL.EXE
+    //!!!!!!!一定要记得close，不然系统进程里会出现n个EXCEL.EXE进程
     workbook->dynamicCall("Close()");
     excel->dynamicCall("Quit()");
     if (excel)

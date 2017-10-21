@@ -1,11 +1,12 @@
 #include <QCoreApplication>
 #include <QFile>
 #include <QDebug>
+#include <QDir>
 #include "ExcelManger.h"
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    QString strPath = "C:/Users/yulei10/Desktop/test.xlsx";
+    QString strPath = QDir::currentPath() + "/test.xlsx";
     QFile file(strPath);
     if(!file.exists())
     {
