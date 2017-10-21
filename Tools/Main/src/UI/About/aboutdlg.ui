@@ -33,7 +33,7 @@
   <property name="styleSheet">
    <string notr="true">QWidget#AboutDlg
 {
-background:#EEEEEE;
+background:#F7F7F7;
 border: 1px solid #999999;
 border-radius: 1px;
 }</string>
@@ -67,9 +67,7 @@ border-radius: 1px;
        <property name="styleSheet">
         <string notr="true">QWidget#m_titleWidget
 {
-background:transparent;
-border:1px solid rgb(120, 120, 120);
-border-radius: 1px;
+background:rgb(0, 0, 0);
 }</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
@@ -141,7 +139,7 @@ border-radius: 1px;
             <property name="styleSheet">
              <string notr="true">QPushButton#m_aboutTitleBtn
 {
-color: #111111;
+color: #FFFFFF;
 border-radius:1px;
 background-repeat:no-repeat;
 background-position:center;
@@ -204,7 +202,7 @@ background-position:center;
 }</string>
             </property>
             <property name="text">
-             <string>×</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -214,25 +212,13 @@ background-position:center;
       </widget>
      </item>
      <item>
-      <widget class="QWidget" name="m_abuotMainWidget" native="true">
+      <widget class="QWidget" name="m_aboutMainWidget" native="true">
        <property name="styleSheet">
-        <string notr="true">QPushButton#m_closeBtn
+        <string notr="true">QWidget#m_aboutMainWidget
 {
-color: #999999;
-border-radius:1px;
-font: bold 14px;
-padding: 6px;
-background-image:url(:/Title/Button/images/close.png);
-background-repeat:no-repeat;
-background-position:center;
-}
-QPushButton#m_closeBtn:hover
-{
-color:white;
-background:red;
-background-image:url(:/Title/Button/images/close.png);
-background-repeat:no-repeat;
-background-position:center;
+background:white;
+border:1px solid rgb(120, 120, 120);
+border-radius: 1px;
 }</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
@@ -417,7 +403,7 @@ QPushButton#m_titleTextBtn:hover
 }</string>
               </property>
               <property name="text">
-               <string>未来之歌.pdf</string>
+               <string>使用说明书.pdf</string>
               </property>
              </widget>
             </item>

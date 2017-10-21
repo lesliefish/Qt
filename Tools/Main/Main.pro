@@ -34,7 +34,8 @@ FORMS    += \
     src/UI/About/aboutdlg.ui
 
 DISTFILES += \
-    main.qss
+    main.qss \
+    res/main.qss
 
 RESOURCES += \
     res/main.qrc

@@ -1,3 +1,16 @@
+/** @file    aboutdlg.h
+* @note
+* @brief   关于窗口
+*
+* @author  lesliefish
+* @date    2017年10月21日
+*
+* @note    detailed functional description of this document and comments
+* @note    History
+*
+* @warning warning message related to this document
+*/
+
 #ifndef ABOUTDLG_H
 #define ABOUTDLG_H
 

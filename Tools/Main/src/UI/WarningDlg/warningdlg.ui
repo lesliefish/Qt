@@ -33,7 +33,7 @@
   <property name="styleSheet">
    <string notr="true">QWidget#WarningDlg
 {
-background:#EEEEEE;
+background:rgb(255, 255, 255);
 border: 1px solid #999999;
 border-radius: 1px;
 }</string>
@@ -71,8 +71,8 @@ border-radius: 1px;
      <property name="styleSheet">
       <string notr="true">QWidget#m_warningTitle
 {
-background:transparent;
-border:1px solid rgb(120, 120, 120);
+background:rgb(0, 0, 0);
+border:1px solid #999999;
 border-radius: 1px;
 }</string>
      </property>
@@ -149,7 +149,7 @@ border-radius: 1px;
           <property name="styleSheet">
            <string notr="true">QPushButton#m_titleTextBtn
 {
-color: #111111;
+color: #FFFFFF;
 border-radius:1px;
 background-repeat:no-repeat;
 background-position:center;
@@ -212,7 +212,7 @@ background-position:center;
 }</string>
           </property>
           <property name="text">
-           <string>×</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -339,12 +339,11 @@ background-position:center;
          <property name="styleSheet">
           <string notr="true">QPushButton#m_OKBtn
 {
-background: red;
+background:red;
 color:white;
-border-radius:1px;
+border:4px solid red;
 font: 12px;
 font-family:微软雅黑;
-padding: 6px;
 background-repeat:no-repeat;
 background-position:center;
 }
@@ -368,7 +367,7 @@ QPushButton#m_OKBtn:hover
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>5</width>
+           <width>7</width>
            <height>20</height>
           </size>
          </property>

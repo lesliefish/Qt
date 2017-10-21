@@ -1,3 +1,16 @@
+/** @file    aboutdlg.h
+* @note
+* @brief   退出提示窗口
+*
+* @author  lesliefish
+* @date    2017年10月19日
+*
+* @note    detailed functional description of this document and comments
+* @note    History
+*
+* @warning warning message related to this document
+*/
+
 #ifndef WARNINGDLG_H
 #define WARNINGDLG_H
 
