@@ -29,3 +29,7 @@ Tools/Main/release/moc_framelesswidget.cpp
 Tools/Main/release/moc_mainwindow.cpp
 Tools/Main/release/qrc_main.cpp
 Tools/Main/release/moc_warningdlg.cpp
+QtExcel/.qmake.stash
+QtExcel/debug/moc_ExcelManger.cpp
+QtExcel/debug/moc_predefs.h
+QtExcel/Makefile

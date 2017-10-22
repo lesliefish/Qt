@@ -3,8 +3,8 @@
 #if defined(Q_OS_WIN)
 #include <QAxObject>
 #include <windows.h>
-#include <QVariant>
 #endif // Q_OS_WIN
+#include <QVariant>
 
 
 ExcelManger::ExcelManger(QObject *parent) : QObject(parent)
@@ -57,7 +57,7 @@ bool ExcelManger::Test(QString &path)
 
     //————————数据的起始列————————————
     int iColumn = columns->property("Column").toInt();
-    qDebug() << QString("起始列为: %1").arg(QString::numberiColumn());
+    qDebug() << QString("起始列为: %1").arg(QString::number(iColumn));
 
 
     //——————————————读出数据—————————————
