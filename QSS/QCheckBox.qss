@@ -1,0 +1,40 @@
+QCheckBox
+{
+	color:#222222;
+	font-size: 12px;
+	font-family:microsoft yahei;
+}
+
+QCheckBox::indicator {
+        width: 17px;
+        height: 17px;		
+		image:url(:/UI/images/CheckBox/checkbox_nor.png);
+}
+QCheckBox::indicator:enabled:unchecked {
+		image:url(:/UI/images/CheckBox/checkbox_nor.png);
+}
+QCheckBox::indicator:enabled:unchecked:pressed {
+		image:url(:/UI/images/CheckBox/checkbox_nor.png);
+}
+QCheckBox::indicator:enabled:unchecked:hover {
+        image: url(:/UI/images/CheckBox/checkbox_hover.png);
+}
+
+QCheckBox::indicator:enabled:checked {
+        image: url(:/UI/images/CheckBox/checkboxon_hover.png);
+}
+QCheckBox::indicator:enabled:checked:hover {
+		image: url(:/UI/images/CheckBox/checkboxon_hover.png);
+}
+QCheckBox::indicator:enabled:checked:pressed {
+        image: url(:/UI/images/CheckBox/checkbox_hover.png);
+}
+QCheckBox::indicator:enabled:indeterminate {
+        image: url(:/UI/images/CheckBox/halfcheckbox_hover.png);
+}
+QCheckBox::indicator:enabled:indeterminate:hover {
+        image: url(:/UI/images/CheckBox/halfcheckbox_hover.png);
+}
+QCheckBox::indicator:enabled:indeterminate:pressed {
+        image: url(:/UI/images/CheckBox/halfcheckbox_hover.png);
+}
