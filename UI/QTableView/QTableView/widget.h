@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include "tablemodel.h"
 
 namespace Ui {
 class Widget;
@@ -17,6 +18,8 @@ public:
 
 private:
     Ui::Widget *ui;
+
+    TableModel* m_tableModel;
 };
 
 #endif // WIDGET_H
