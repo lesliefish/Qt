@@ -6,7 +6,7 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-    m_pTableModel = new TableModel();
+
 }
 
 Widget::~Widget()
