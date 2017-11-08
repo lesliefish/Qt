@@ -10,12 +10,12 @@ class TableModel : public QAbstractTableModel
 public:
     explicit TableModel(QObject *parent = nullptr);
 
-    enum ColumnItem
+    enum HeaderItem
     {
         IDItem,
         NameItem,
         AgeItem,
-        ColumnCount//列数
+        ColumnCountItem//列数
     };
     //初始化
     bool Init();

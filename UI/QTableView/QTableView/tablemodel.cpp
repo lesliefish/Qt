@@ -3,13 +3,16 @@
 TableModel::TableModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
-
+    Init();
 }
 
 bool TableModel::Init()
 {
-    setHeaderData(IDItem, Qt::Horizontal, tr("ID"));
-    setHeaderData(NameItem, Qt::Horizontal, tr("zhangsan"));
+    insertColumns(0, HeaderItem::ColumnCountItem);
+    setHeaderData(IDItem, Qt::Horizontal,"ID",Qt::DisplayRole);
+    setHeaderData(NameItem, Qt::Horizontal, "ID", Qt::DisplayRole);
+    setHeaderData(AgeItem, Qt::Horizontal, "AAA", Qt::DisplayRole);
+    return true;
 }
 
 QVariant TableModel::headerData(int section, Qt::Orientation orientation, int role) const
