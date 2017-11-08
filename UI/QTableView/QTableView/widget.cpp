@@ -7,8 +7,6 @@ Widget::Widget(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    m_tableModel = new TableModel();
-    ui->tableView->setModel(m_tableModel);
 }
 
 Widget::~Widget()
