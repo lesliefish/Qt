@@ -28,19 +28,26 @@ void Widget::Init()
         m_model = new QStandardItemModel();
     }
 
+    //添加表头数据
     m_model->setHorizontalHeaderLabels(strHeader);
+    //设置列数
     m_model->setColumnCount(strHeader.size());
+    //设置行数
     m_model->setRowCount(2);
+    //隐藏列表头
     ui->tableView->verticalHeader()->hide();
 
+    //setModel
     ui->tableView->setModel(m_model);
 
+    //表头qss设置
     QString strHeaderQss;
     strHeaderQss = "QHeaderView::section { background:green; color:white;min-height:3em;}";
     ui->tableView->setStyleSheet(strHeaderQss);
-    //设置最后一列表头填充整个控件
+
+    //表头设置最后一列数据填充整个控件
     ui->tableView->horizontalHeader()->setStretchLastSection(true);
 
-    //均分填充整个控件
+    //表头内容均分填充整个控件
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
