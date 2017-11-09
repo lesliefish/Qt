@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QStandardItemModel>
 
 namespace Ui {
 class Widget;
@@ -17,6 +18,12 @@ public:
 
 private:
     Ui::Widget *ui;
+
+private:
+    QStandardItemModel* m_model;
+
+private:
+    void Init();
 
 };
 
