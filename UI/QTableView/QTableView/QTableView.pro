@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        widget.cpp \
+    headerview.cpp
 
 HEADERS += \
-        widget.h
+        widget.h \
+    headerview.h
 
 FORMS += \
         widget.ui

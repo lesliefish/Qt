@@ -19,7 +19,8 @@ Widget::~Widget()
 void Widget::Init()
 {
     QStringList strHeader;
-    strHeader << "name"
+    strHeader << " "
+              << "name"
               << "age"
               << "sex";
 
@@ -28,8 +29,16 @@ void Widget::Init()
         m_model = new QStandardItemModel();
     }
 
+    ui->filterEdit->setVisible(false);
+    ui->filterLabel->setVisible(false);
+
+    //表头增加复选框方法
+    HeaderView *header = new HeaderView(Qt::Horizontal, ui->tableView);
+    ui->tableView->setHorizontalHeader(header);
+
+
     //添加表头数据
-    m_model->setHorizontalHeaderLabels(strHeader);
+    //m_model->setHorizontalHeaderLabels(strHeader);
     //设置列数
     m_model->setColumnCount(strHeader.size());
     //设置行数

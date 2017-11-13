@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QStandardItemModel>
+#include "headerview.h"
 
 namespace Ui {
 class Widget;
