@@ -1,0 +1,121 @@
+QWidget#m_mainWidget
+{
+    border: 1px solid #999999;
+    border-radius: 0px;
+    background:#FFFFFF;
+}
+
+QWidget#m_titleWidget
+{
+    background:black;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #1A1A1A, stop: 0.1 black, stop: 0.49 #1A1A1A, stop: 0.5 #1A1A1A, stop: 1 black);
+}
+
+QPushButton
+{
+    border-radius: 5px;
+    color:white;
+    background:transparent;
+    /*border-radius: 10px;*/
+    font: 12px;
+    /*min-width: 6em;*/
+    padding: 6px;
+    font-family:微软雅黑;
+}
+
+QPushButton#m_closeBtn
+{
+color: #999999;
+border-radius:1px;
+font: bold 9px;
+padding: 6px;
+background-image:url(:/Title/Button/images/close.png);
+background-repeat:no-repeat;
+background-position:center;
+}
+QPushButton#m_closeBtn:hover
+{
+background:red;
+background-image:url(:/Title/Button/images/close.png);
+background-repeat:no-repeat;
+background-position:center;
+}
+
+QPushButton#m_helpBtn
+{
+color: #999999;
+border-radius:1px;
+font: bold 9px;
+padding: 6px;
+background-image:url(:/Title/Button/images/help.png);
+background-repeat:no-repeat;
+background-position:center;
+}
+QPushButton#m_helpBtn:hover
+{
+background:#999999;
+background-image:url(:/Title/Button/images/help.png);
+background-repeat:no-repeat;
+background-position:center;
+}
+
+QPushButton#m_minBtn
+{
+border-radius:1px;
+font: bold 9px;
+padding: 6px;
+background-image:url(:/Title/Button/images/min.png);
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
+}
+
+QPushButton#m_minBtn:hover
+{
+background:#999999;
+background-image:url(:/Title/Button/images/min.png);
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
+}
+
+QPushButton#m_maxBtn
+{
+border:none;
+border-radius:1px;
+font: bold 14px;
+background-image:url(:/Title/Button/images/max.png);
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
+background-clip:padding;
+}
+
+QPushButton#m_maxBtn:hover
+{
+background:#999999;
+background-image:url(:/Title/Button/images/max.png);
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
+}
+
+QPushButton#m_appNameBtn
+{
+color: white;
+border-radius:1px;
+font: 12px;
+padding: 6px;
+}
+
+QWidget#m_warningDlg
+{
+background:red;
+}
+
+QWidget#m_aboutDlg
+{
+background:red;
+color: #e6e6e6;
+border-radius:1px;
+}

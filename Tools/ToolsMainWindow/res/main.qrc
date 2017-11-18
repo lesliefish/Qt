@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/Title/Button">
+        <file>images/max.png</file>
+        <file>images/close.png</file>
+        <file>images/min.png</file>
+        <file>images/normal.png</file>
+        <file>images/help.png</file>
+    </qresource>
+</RCC>
