@@ -36,3 +36,4 @@ QtExcel/Makefile
 UI/QTableView/build-QTableView-Desktop_Qt_5_6_0_MinGW_32bit-Debug/Makefile
 *.stash
 UI/QTableView/QTableView/Makefile
+PyQt/Tools/comtypes-1.1.3-2.zip
