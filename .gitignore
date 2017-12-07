@@ -37,3 +37,14 @@ UI/QTableView/build-QTableView-Desktop_Qt_5_6_0_MinGW_32bit-Debug/Makefile
 *.stash
 UI/QTableView/QTableView/Makefile
 PyQt/Tools/comtypes-1.1.3-2.zip
+*.tlog
+*.obj
+*.opendb
+*.pdb
+Core/QGraphicsview_test/Win32/Debug/QGraphicsview_test.ilk
+Core/QGraphicsview_test/.vs/QGraphicsview_test/v14/.suo
+*.log
+*.filters
+Core/QGraphicsview_test/QGraphicsview_test/GeneratedFiles/Debug/moc_QGraphicsviewTest.cpp
+Core/QGraphicsview_test/QGraphicsview_test/GeneratedFiles/qrc_QGraphicsviewTest.cpp
+Core/QGraphicsview_test/QGraphicsview_test.VC.db
