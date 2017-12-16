@@ -33,17 +33,17 @@ MainScene::MainScene(QObject *parent)
 	qreal lcdPosX = 0;		// LCD左上角起始点位置
 	qreal lcdPosY = 0;		// LCD左上角起始点y位置
 	qreal lcdUnitWidth = 221;   // LCD单元宽度
-	qreal lcdUnitheight = 90;   // LCD单元厚度
-	int   lcdRows = 3;			// LCD行数
-	int   lcdColumns = 2;		// LCD列数
-	int   leftLEDColumns = 1;	// 左边LED列数
-	int   rightLEDColumns = 1;	// 右边LED列数
-	int   topLEDRows = 1;		// 顶部LED行数
-	qreal ledUnitWidth = 90;	// LED宽度
-	qreal ledUnitHeight = 45;	// LED高度
-	qreal boardThick = 5;	    // 封板厚度
+	qreal lcdUnitHeight = 90;   // LCD单元厚度
+	int   lcdRows = 18;			// LCD行数
+	int   lcdColumns = 12;		// LCD列数
+	int   leftLEDColumns = 5;	// 左边LED列数
+	int   rightLEDColumns = 7;	// 右边LED列数
+	int   topLEDRows = 3;		// 顶部LED行数
+	qreal ledUnitWidth = 80;	// LED宽度
+	qreal ledUnitHeight = 49;	// LED高度
+	qreal boardThick = 15;	    // 封板厚度
 
-	QRectF lcdRect(lcdPosX, lcdPosY, lcdUnitWidth, lcdUnitheight);
+	QRectF lcdRect(lcdPosX, lcdPosY, lcdUnitWidth, lcdUnitHeight);
 	QGraphicsItem* lcdPart = addLCDPart(lcdRect, lcdRows, lcdColumns);
 	lcdPart->setFlag(QGraphicsItem::ItemIsMovable);
 
@@ -67,16 +67,26 @@ MainScene::MainScene(QObject *parent)
 	QRectF horizontalLEDRectf(topLEDPartXPos, topLEDPartYPos, topLEDPartWidth, topLEDPartHeight);
 	QGraphicsItem* horizontalRightLEDWithBoard = addHorizontalLEDWithBoard(horizontalLEDRectf, topLEDRows, ledUnitWidth, ledUnitHeight);
 	horizontalRightLEDWithBoard->setParentItem(lcdPart);
-	
 
 	// --------------------------------------------下一层
+	
+	//qreal cabinetUnitWidth = lcdUnitWidth-2*boardThick;	// 机柜中间单元宽度
+	//qreal cabinetUnitHeight = lcdUnitHeight-2*boardThick;// 机柜中间单元高度
 
+	qreal cabinetUnitWidth = 250;	// 机柜中间单元宽度
+	qreal cabinetUnitHeight = 180.8;// 机柜中间单元高度
 
-	//QPrinter printer(QPrinter::HighResolution);
-	//printer.setPaperSize(QPrinter::A4);
+	qreal cabinetXPos = lcdPosX - (ledUnitWidth*leftLEDColumns + 2 * boardThick);
+	qreal cabinetYPos = lcdPosY+lcdUnitHeight*lcdRows;
+	QRectF cabinetPartRect(cabinetXPos, cabinetYPos, verticalLCDRectWidth + ledUnitWidth*(leftLEDColumns + rightLEDColumns) + 4 * boardThick, cabinetUnitHeight+2 * boardThick);
+	addCabinet(cabinetPartRect, cabinetUnitWidth, cabinetUnitHeight, boardThick)->setParentItem(lcdPart);
+	
 
-	//QPainter painter(&printer);
-	//this->render(&painter);
+	QPrinter printer(QPrinter::HighResolution);
+	printer.setPaperSize(QPrinter::A4);
+
+	QPainter painter(&printer);
+	this->render(&painter);
 }
 
 MainScene::~MainScene()
@@ -292,4 +302,55 @@ QGraphicsItem* MainScene::addHorizontalLEDWithBoard(QRectF rect, int topRows, in
 	}
 
 	return horizontalLEDWithBoard;
+}
+
+QGraphicsItem* MainScene::addCabinet(QRectF rect, int cabinetUnitWidth, int cabinetUnitHeight, int boardThick)
+{
+	QPen outLinePen("#979797");
+	outLinePen.setWidth(1);
+	QBrush mainBrush("#BEBEBE");
+	QGraphicsItem* cabinetPart = this->addRect(rect, outLinePen, mainBrush);
+
+	qreal xPos = rect.x();
+	qreal yPos = rect.y();
+	qreal width = rect.width();
+	qreal height = rect.height();
+
+	int cabinetCount = width / (cabinetUnitWidth+2*boardThick);   // 能放下的柜子个数
+	int margin = width - cabinetCount*(cabinetUnitWidth + 2 * boardThick);// 余量 分成左右柜子
+
+	qreal startXPos = xPos + margin / 2 + boardThick;
+	for (size_t i = 0; i < cabinetCount; ++i)
+	{
+		QRectF cabinetRectf(startXPos + i*(cabinetUnitWidth+2*boardThick), yPos + (height - cabinetUnitHeight) / 2, cabinetUnitWidth, cabinetUnitHeight);
+		QBrush cabinetBrush("#FFFFFF");
+		QGraphicsItem* cabinetUnit = this->addRect(cabinetRectf, outLinePen, cabinetBrush);
+		cabinetUnit->setParentItem(cabinetPart);
+
+		qreal lineX1 = cabinetUnit->boundingRect().x() + cabinetUnitWidth / 2;
+		qreal lineY1 = cabinetUnit->boundingRect().y();
+		qreal lineX2 = cabinetUnit->boundingRect().x() + cabinetUnitWidth / 2;
+		qreal lineY2 = cabinetUnit->boundingRect().y() + cabinetUnitHeight;
+		// 门线
+		QPen linePen("#979797");
+		linePen.setWidth(1);
+		QGraphicsItem* doorLineItem = this->addLine(lineX1, lineY1, lineX2, lineY2, linePen);
+		doorLineItem->setParentItem(cabinetUnit);
+
+		// 门把手形状
+		qreal bashouXPos = cabinetUnit->boundingRect().x() + cabinetUnitWidth / 2 + 5;
+		qreal bashouYPos = cabinetUnit->boundingRect().y() + cabinetUnitHeight/2-4.5;
+		qreal bashouWidth = 4.8;
+		qreal bashouHeight = 9;
+
+		QPen bashouPen("#000000");
+		bashouPen.setWidth(1);
+		QBrush bashouBrush("#FFFFEE");
+		QGraphicsItem* lashouItem;
+		QRectF lashouItemRect(bashouXPos, bashouYPos, bashouWidth, bashouHeight);
+		lashouItem = this->addRect(lashouItemRect, linePen, bashouBrush);
+		lashouItem->setParentItem(cabinetUnit);
+	}
+
+	return cabinetPart;
 }

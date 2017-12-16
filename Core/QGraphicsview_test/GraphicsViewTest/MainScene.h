@@ -25,7 +25,7 @@ public:
 	// LED´ø·â°å ºáÅÅ
 	QGraphicsItem* addHorizontalLEDWithBoard(QRectF rect, int topRows, int ledWidth, int ledHeight);
 
-
+	QGraphicsItem* addCabinet(QRectF rect, int cabinetUnitWidth, int cabinetUnitHeight, int boardThick);
 private:
 	QGraphicsEllipseItem* m_ellipse;
 
