@@ -36,6 +36,9 @@ private:
 
 	// 正视图的LED和LCD部分
 	QGraphicsRectItem* m_frontViewLEDAndLCDPart;
+
+	qreal m_bashouHeight = 9;			// 门把手高度
+	qreal m_bashouWidth = 4.8;		// 门把手宽度
 };
 
 #endif // MAINSCENE_H
