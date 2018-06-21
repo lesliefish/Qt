@@ -48,3 +48,7 @@ Core/QGraphicsview_test/.vs/QGraphicsview_test/v14/.suo
 Core/QGraphicsview_test/QGraphicsview_test/GeneratedFiles/Debug/moc_QGraphicsviewTest.cpp
 Core/QGraphicsview_test/QGraphicsview_test/GeneratedFiles/qrc_QGraphicsviewTest.cpp
 Core/QGraphicsview_test/QGraphicsview_test.VC.db
+Project/QtGuiApplication/.vs/QtGuiApplication/v15/Browse.VC.db
+Project/QtGuiApplication/.vs/QtGuiApplication/v15/.suo
+Project/QtGuiApplication/.vs/QtGuiApplication/v15/ipch/AutoPCH/6b0420b2d8bc96cf/MAIN.ipch
+*.ipch
