@@ -52,6 +52,6 @@ void Square::slotTimer()
     {
         this->setY(this->y() + 2);
     }
-    // 调用回调函数传递正方形位置
+    // 调用回调函数传递正方形位置  类似于发信号给mainwindow  由mainwindow执行相应槽函数
     m_callbackFunc(this->pos());
 }

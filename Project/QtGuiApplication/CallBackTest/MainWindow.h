@@ -18,9 +18,9 @@ private:
     Ui::MainWindow* ui;
 
     QGraphicsScene* m_scene;
-    Square *m_square;         // We declare the square, which will transmit the callback function
-    static QLineEdit *line1;    // We declare a static QLineEdit, which will run the callback function
-    static QLineEdit *line2;    // We declare a static QLineEdit, which will run the callback function
+    Square *m_square;           // 声明正方形 传输回调
+    static QLineEdit *line1;    // 声明一个静态QLineEdit, 执行回调
+    static QLineEdit *line2;    // 声明一个静态QLineEdit, 执行回调
 
 private:
     // 声明一个回调函数
