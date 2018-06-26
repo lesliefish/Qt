@@ -52,3 +52,4 @@ Project/QtGuiApplication/.vs/QtGuiApplication/v15/Browse.VC.db
 Project/QtGuiApplication/.vs/QtGuiApplication/v15/.suo
 Project/QtGuiApplication/.vs/QtGuiApplication/v15/ipch/AutoPCH/6b0420b2d8bc96cf/MAIN.ipch
 *.ipch
+*.dll

@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CallBackTest", "CallBackTest\CallBackTest.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SingleAppTest", "SingleAppTest\SingleAppTest.vcxproj", "{B99FF781-140E-490E-AFFC-3B193937A84A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SingleAppTest2", "SingleAppTest2\SingleAppTest2.vcxproj", "{772C7FFF-8766-4C65-A6AA-3AB4DCAA0112}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,11 +19,20 @@ Global
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.Build.0 = Debug|x64
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.ActiveCfg = Release|x64
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.Build.0 = Release|x64
+		{B99FF781-140E-490E-AFFC-3B193937A84A}.Debug|x64.ActiveCfg = Debug|x64
+		{B99FF781-140E-490E-AFFC-3B193937A84A}.Debug|x64.Build.0 = Debug|x64
+		{B99FF781-140E-490E-AFFC-3B193937A84A}.Release|x64.ActiveCfg = Release|x64
+		{B99FF781-140E-490E-AFFC-3B193937A84A}.Release|x64.Build.0 = Release|x64
+		{772C7FFF-8766-4C65-A6AA-3AB4DCAA0112}.Debug|x64.ActiveCfg = Debug|x64
+		{772C7FFF-8766-4C65-A6AA-3AB4DCAA0112}.Debug|x64.Build.0 = Debug|x64
+		{772C7FFF-8766-4C65-A6AA-3AB4DCAA0112}.Release|x64.ActiveCfg = Release|x64
+		{772C7FFF-8766-4C65-A6AA-3AB4DCAA0112}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = msvc2017_64
 		SolutionGuid = {0BB066DD-85F6-427D-B187-90E842B7B61E}
 	EndGlobalSection
 EndGlobal
