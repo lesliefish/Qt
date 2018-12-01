@@ -53,3 +53,5 @@ Project/QtGuiApplication/.vs/QtGuiApplication/v15/.suo
 Project/QtGuiApplication/.vs/QtGuiApplication/v15/ipch/AutoPCH/6b0420b2d8bc96cf/MAIN.ipch
 *.ipch
 *.dll
+Project/WebTest/.vs/WebTest/v14/.suo
+Project/WebTest/.vs/config/applicationhost.config
