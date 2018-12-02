@@ -1,8 +1,8 @@
 /** @file   WebTest.h
-  * @note   HangZhou Hikvision Digital Technology Co., Ltd. All Right Reserved.
+  * @note   
   * 
-  * @brief  Qt Ê¹ÓÃwebÒıÇæ¿ª·¢Demo
-  * @author yulei10
+  * @brief  Qt ä½¿ç”¨webå¼•æ“å¼€å‘Demo
+  * @author lesliefish
   * @date   2018/11/30
   */
 #pragma once
@@ -20,15 +20,15 @@ public:
     WebTest(QWidget *parent = Q_NULLPTR);
 
 signals:
-    // JSÔËĞĞ½áÊø
+    // JSè¿è¡Œç»“æŸ
     void signalRunJsOver();
 
 private:
     void initUi();
     void initConncetion();
-    // ¼ÓÔØhtmlÎÄ¼ş
+    // åŠ è½½htmlæ–‡ä»¶
     void loadHtml();
-    // »ñÈ¡jsº¯Êı·µ»ØÖµ
+    // è·å–jså‡½æ•°è¿”å›å€¼
     QString getJsRetString();
 
 public slots:
