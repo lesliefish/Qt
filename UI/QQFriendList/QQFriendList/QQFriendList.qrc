@@ -1,4 +1,11 @@
 <RCC>
-    <qresource prefix="QQFriendList">
+    <qresource prefix="/QQFriendList">
+        <file>Resources/images/expand_down.svg</file>
+        <file>Resources/images/expand_right.svg</file>
+        <file>Resources/images/portrait_boy.svg</file>
+        <file>Resources/images/portrait_girl.svg</file>
+        <file>Resources/images/busy-im.svg</file>
+        <file>Resources/images/leave-im.svg</file>
+        <file>Resources/images/online-im.svg</file>
     </qresource>
 </RCC>

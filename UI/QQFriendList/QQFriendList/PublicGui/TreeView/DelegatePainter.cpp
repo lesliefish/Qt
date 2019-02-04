@@ -78,6 +78,7 @@ namespace publicgui
 		painter->setPen(color);
 		painter->drawText(paintRect, addFlag | Qt::AlignVCenter, content);
 		painter->save();
+		painter->restore();
 	}
 
 	/****************************************!

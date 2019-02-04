@@ -10,21 +10,30 @@
 
 #include <QTreeView>
 #include "PublicGui/TreeView/TreeView.h"
+#include "GlobalDefines.h"
 
 using namespace publicgui;
 
 namespace qqfriendlist
 {
+	class ItemDelegate;
 	class FriendTree : public TreeView
 	{
 		Q_OBJECT
 
 	public:
-		FriendTree(QWidget *parent);
+		FriendTree(QWidget *parent = Q_NULLPTR);
 		~FriendTree();
+
+		// ¸³Öµ
+		void setValues(const std::vector<Group>& groups);
 
 	private:
 		void initUi();
 		void initConnection();
+
+	private:
+		QStandardItemModel* m_model{ nullptr }; // model
+		ItemDelegate* m_delegate{ nullptr };
 	};
 }

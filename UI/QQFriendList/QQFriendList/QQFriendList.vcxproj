@@ -114,17 +114,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FriendTree\FriendTree.cpp" />
+    <ClCompile Include="FriendTree\ItemDelegate.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PublicGui\TreeView\DelegatePainter.cpp" />
     <ClCompile Include="PublicGui\TreeView\TreeView.cpp" />
     <ClCompile Include="PublicGui\TreeView\StyledDelegate.cpp" />
-    <ClCompile Include="QQFriendList.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="QQFriendList.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtUic Include="QQFriendList.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="QQFriendList.qrc" />
@@ -136,6 +130,11 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="FriendTree\ItemDelegate.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\FriendTree;$(QTDIR)\include\QtSvg</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\FriendTree;$(QTDIR)\include\QtSvg</IncludePath>
+    </QtMoc>
+    <ClInclude Include="GlobalDefines.h" />
     <ClInclude Include="PublicGui\TreeView\DelegatePainter.h" />
     <QtMoc Include="PublicGui\TreeView\StyledDelegate.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\FriendTree</IncludePath>
