@@ -33,6 +33,9 @@ namespace qqfriendlist
 	protected:
 		QSize sizeHint(const QStyleOptionViewItem &option,
 			const QModelIndex &index) const Q_DECL_OVERRIDE;
+
+		// hoverµÄrole
+		virtual int getHoverEventRole(const QPoint& pos, const QStyleOptionViewItem& option, const QModelIndex &index) const;
 	};
 
 }

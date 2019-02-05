@@ -47,9 +47,12 @@ namespace publicgui
 		// 返回被点击的角色 具体点了Item上的哪一个控件
 		virtual int getMouseEventRole(const QPoint& pos, const QStyleOptionViewItem& option, const QModelIndex &index) const;
 
+		// 返回hover的角色 哪个role hover了
+		virtual int getHoverEventRole(const QPoint& pos, const QStyleOptionViewItem& option, const QModelIndex &index) const;
+
 		public slots:
 		// view上层调用这两个函数
-		Q_INVOKABLE virtual void hoverEvent(QHoverEvent* hoverEvent, QAbstractItemView* view, const QStyleOptionViewItem& option, const QModelIndex& modelIndex);
+		Q_INVOKABLE virtual int hoverEvent(QHoverEvent* hoverEvent, QAbstractItemView* view, const QStyleOptionViewItem& option, const QModelIndex& modelIndex);
 		Q_INVOKABLE virtual int mouseEvent(QMouseEvent* mouseEvent, QAbstractItemView* view, const QStyleOptionViewItem& option, const QModelIndex& modelIndex);
 
 	};

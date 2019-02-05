@@ -14,7 +14,7 @@ namespace qqfriendlist
 
 		const QRect kContactPortraitRect{ 10,10,40,40 }; // 联系人头像
 		const QRect kContactNameRect{ 60,10,200,20 };	 // 联系人名字
-		const QRect kSignatureRect{ 60,30,400,20 };		 // 联系人个性签名
+		const QRect kSignatureRect{ 60,30,160,20 };		 // 联系人个性签名
 		const QRect kVipIconRect{ 60,30,30,12 };		 // 联系人VIP图标
 		const QRect kOnlineStateIconRect{ 40,35,14,14 }; // 在线状态图标
 		const QRect kVideoIconRect{ 0,25,20,13 };	     // 视频通话图标
@@ -216,6 +216,34 @@ namespace qqfriendlist
 		}
 
 		return QSize(size.width(), kContactItemHeight);   // 联系人Item高度
+	}
+
+	/****************************************!
+	 * @brief  根据鼠标位置 判断hover的role是哪个 并返回
+	 * @param  [in]  const QPoint & pos 鼠标位置
+	 * @param  [in]  const QStyleOptionViewItem & option 
+	 * @param  [in]  const QModelIndex & index 索引位置
+	 * @return int  
+	 ****************************************/
+	int ItemDelegate::getHoverEventRole(const QPoint& pos, const QStyleOptionViewItem& option, const QModelIndex &index) const
+	{
+		// 视频通话图标位置
+		QRect videoRect(option.rect.left() + option.rect.width() - kVideoIconRect.width() - 16, option.rect.top() + kVideoIconRect.y(),
+			kVideoIconRect.width(), kVideoIconRect.height());
+		if (!index.data(static_cast<int>(CustomRole::IsGroupRole)).toBool() && videoRect.contains(pos))
+		{
+			return static_cast<int>(CustomRole::VideoRole);
+		}
+
+		// 个性签名
+		QRect signatureRect(option.rect.left() + kSignatureRect.x(), option.rect.top() + kSignatureRect.y(),
+			kSignatureRect.width(), kSignatureRect.height());
+		if (!index.data(static_cast<int>(CustomRole::IsGroupRole)).toBool() && signatureRect.contains(pos))
+		{
+			return static_cast<int>(CustomRole::SignatureRole);
+		}
+
+		return -1;
 	}
 
 }

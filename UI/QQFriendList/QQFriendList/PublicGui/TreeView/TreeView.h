@@ -23,7 +23,8 @@ namespace publicgui
 		void signalClicked(const QModelIndex& iIndex, int role);
 		// 双击信号
 		void signalDoubleClicked(const QModelIndex& iIndex);
-
+		// hoverItem信号 具体到hover的Role
+		void signalHover(const QModelIndex& iIndex, int role);
 	protected:
 		virtual bool viewportEvent(QEvent* pEvent);
 

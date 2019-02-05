@@ -33,19 +33,25 @@ namespace publicgui
 		return -1;
 	}
 
-	Q_INVOKABLE void StyledDelegate::hoverEvent(QHoverEvent* hoverEvent, QAbstractItemView* view,
+	int StyledDelegate::getHoverEventRole(const QPoint& pos, const QStyleOptionViewItem& option, const QModelIndex &index) const
+	{
+		return -1;
+	}
+
+	Q_INVOKABLE int StyledDelegate::hoverEvent(QHoverEvent* hoverEvent, QAbstractItemView* view,
 		const QStyleOptionViewItem& option, const QModelIndex& modelIndex)
 	{
 		if (nullptr == hoverEvent || nullptr == view || !modelIndex.isValid())
 		{
-			return;
+			return -1;
 		}
 
 		auto curModel = view->model();
 		if (nullptr == curModel)
 		{
-			return;
+			return -1;
 		}
+		auto pos = hoverEvent->pos();
 
 		auto eventType = hoverEvent->type();
 		switch (eventType)
@@ -55,7 +61,6 @@ namespace publicgui
 			break;
 		case QEvent::HoverMove:
 		{
-			auto pos = hoverEvent->pos();
 			curModel->setData(modelIndex, pos, ItemRole::PosRole); // 获取位置
 
 			switch (eventType)
@@ -81,6 +86,14 @@ namespace publicgui
 		}
 
 		view->update(modelIndex);
+
+		if (option.rect.contains(pos))
+		{
+			// hover 的role
+			return getHoverEventRole(pos, option, modelIndex);
+		}
+
+		return -1;
 	}
 
 	Q_INVOKABLE int StyledDelegate::mouseEvent(QMouseEvent* mouseEvent, QAbstractItemView* view,

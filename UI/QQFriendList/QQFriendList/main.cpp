@@ -27,7 +27,7 @@ namespace
 // 生成测试数据
 auto createFriendDatas = [&]()
 {
-	static int qqNumber = 10000; // 起始qq号 
+	static int qqNumber = 396396396; // 起始qq号 
 	std::vector<Group> groupList{};
 	for (int i = 0; i < groups.size(); i++)
 	{

@@ -47,6 +47,8 @@ namespace qqfriendlist
 		GroupNameRole,					   // 群组名称
 		ContactRole,					   // 联系人信息
 		IsExpandedRole,					   // 是否收起
+		VideoRole,						   // 视频通话role
+		SignatureRole,					   // 个性签名
 	};
 
 	Q_DECLARE_METATYPE(Contact);

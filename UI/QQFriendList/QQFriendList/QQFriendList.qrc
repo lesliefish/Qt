@@ -8,5 +8,6 @@
         <file>Resources/images/leave-im.svg</file>
         <file>Resources/images/online-im.svg</file>
         <file>Resources/images/video.svg</file>
+        <file>Resources/images/video_hover.svg</file>
     </qresource>
 </RCC>
