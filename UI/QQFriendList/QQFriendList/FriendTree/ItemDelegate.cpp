@@ -17,7 +17,8 @@ namespace qqfriendlist
 		const QRect kSignatureRect{ 60,30,400,20 };		 // 联系人个性签名
 		const QRect kVipIconRect{ 60,30,30,12 };		 // 联系人VIP图标
 		const QRect kOnlineStateIconRect{ 40,35,14,14 }; // 在线状态图标
-	}
+		const QRect kVideoIconRect{ 0,25,20,13 };	     // 视频通话图标
+	}	
 
 
 	ItemDelegate::ItemDelegate(QObject *parent)
@@ -90,7 +91,7 @@ namespace qqfriendlist
 	}
 
 	/****************************************!
-	 * @brief  绘制联系人
+	 * @brief  绘制联系人信息
 	 * @param  [in]  QPainter * painter 
 	 * @param  [in]  const QStyleOptionViewItem & option 
 	 * @param  [in]  const QModelIndex & index 
@@ -185,6 +186,17 @@ namespace qqfriendlist
 			painter->drawRoundedRect(onlineStateIconRect, onlineStateIconRect.width()/2, onlineStateIconRect.height()/2);
 
 			delegatePainter.paintSvgImage(painter, onlineStateIconPath, onlineStateIconRect);
+		}
+
+		// 视频通话
+		{
+			// 只有hover状态才会显示视频通话图标
+			if (operateActions.isHovered)
+			{
+				QRect videoRect(option.rect.left() + option.rect.width() - kVideoIconRect.width() - 16, option.rect.top() + kVideoIconRect.y(),
+					kVideoIconRect.width(), kVideoIconRect.height());
+				delegatePainter.paintSvgImage(painter, ":/QQFriendList/Resources/images/video.svg", videoRect);
+			}
 		}
 	}
 

@@ -57,10 +57,10 @@ int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 	FriendTree w;
-	w.setFixedWidth(276);
-
 	// 传入数据
 	w.setValues(createFriendDatas());
+	w.setMinimumWidth(276);
+	w.resize(276, 450);
 	w.show();
 	return a.exec();
 }

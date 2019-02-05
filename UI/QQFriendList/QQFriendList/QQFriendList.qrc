@@ -7,5 +7,6 @@
         <file>Resources/images/busy-im.svg</file>
         <file>Resources/images/leave-im.svg</file>
         <file>Resources/images/online-im.svg</file>
+        <file>Resources/images/video.svg</file>
     </qresource>
 </RCC>

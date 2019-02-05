@@ -27,7 +27,7 @@ namespace qqfriendlist
 		int sex{ 0 };						// 性别 0男 1女
 		QString nickName{};					// 昵称
 		QString id{};						// QQ号
-		QString signature{"Nothing is impossible for a willing heart."};// 个性签名
+		QString signature{"nice to meet you .."};// 个性签名
 		QString headPortrait{};				// 头像路径
 		OnlineState onlineState{ OnlineState::Online }; // 在线状态
 		bool isVip{0};						// VIP类型 0不是vip; 1 vip; 2 svip 

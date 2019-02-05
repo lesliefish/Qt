@@ -29,6 +29,7 @@ namespace qqfriendlist
 			// 添加分组
 			QStandardItem* item = new QStandardItem(group.groupName);
 			item->setEditable(false);
+			item->setData(group.groupName, Qt::ToolTipRole);
 			item->setData(true, static_cast<int>(CustomRole::IsGroupRole));
 			m_model->appendRow(item);
 			for (const auto& contact : group.contactList)
@@ -36,6 +37,7 @@ namespace qqfriendlist
 				// 分组下的联系人
 				QStandardItem* contactItem = new QStandardItem(contact.name);
 				contactItem->setEditable(false);
+				contactItem->setData(contact.name, Qt::ToolTipRole);
 
 				QVariant value{};
 				value.setValue(contact);
