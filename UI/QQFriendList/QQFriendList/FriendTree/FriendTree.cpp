@@ -82,6 +82,20 @@ namespace qqfriendlist
             }
         });
 
+        // 双击打开聊天
+        connect(this, &QTreeView::doubleClicked, [&](const QModelIndex& index)
+        {
+            if (!index.data(static_cast<int>(CustomRole::IsGroupRole)).toBool())
+            {
+                // 不是分组Item
+                auto info = index.data(static_cast<int>(CustomRole::ContactRole)).value<Contact>();
+                QMessageBox msgBox;
+                msgBox.setWindowTitle(QStringLiteral("双击打开聊天"));
+                msgBox.setText(QStringLiteral("你好，") + info.name + QStringLiteral("。在不？"));
+                msgBox.exec();
+            }
+        });
+
         // 展开时更换左侧的展开图标
         connect(this, &QTreeView::expanded, [&](const QModelIndex& index)
         {
@@ -163,7 +177,8 @@ namespace qqfriendlist
         {
             QMessageBox msgBox;
             msgBox.setWindowTitle(QStringLiteral("视频通话"));
-            msgBox.setText("call " + info.name + " time: " +  QTime::currentTime().toString("hh:mm:ss"));
+            msgBox.setText(QTime::currentTime().toString("hh:mm:ss")
+                + QStringLiteral("，向") + info.name + QStringLiteral("发起视频通话。"));
             msgBox.exec();
             break;
         }

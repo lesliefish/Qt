@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 	// 传入数据
 	w.setValues(createFriendDatas());
 	w.setMinimumWidth(276);
-    w.setMaximumWidth(320);
+    w.setMaximumWidth(600);
 
 	w.resize(276, 500);
 	w.show();
