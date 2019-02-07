@@ -63,25 +63,28 @@ namespace publicgui
 				Q_ARG(QStyleOptionViewItem, option),
 				Q_ARG(QModelIndex, modelIndex));
 
-			if (eventType == QEvent::MouseButtonRelease &&
-				Qt::LeftButton == mouseEvent->button())
-			{
-				// ×ó¼ü°´ÏÂ
-				if (role != -1)
-				{
-					emit signalClicked(modelIndex, role);
-				}
-				else
-				{
-					emit signalClicked(modelIndex);
-				}
-			}
-			if (eventType == QEvent::MouseButtonDblClick &&
-				Qt::LeftButton == mouseEvent->button())
-			{
-				// ×ó¼üË«»÷
-				emit signalDoubleClicked(modelIndex);
-			}
+            if (modelIndex.isValid())
+            {
+                if (eventType == QEvent::MouseButtonRelease &&
+                    Qt::LeftButton == mouseEvent->button())
+                {
+                    // ×ó¼ü°´ÏÂ
+                    if (role != -1)
+                    {
+                        emit signalClicked(modelIndex, role);
+                    }
+                    else
+                    {
+                        emit signalClicked(modelIndex);
+                    }
+                }
+                if (eventType == QEvent::MouseButtonDblClick &&
+                    Qt::LeftButton == mouseEvent->button())
+                {
+                    // ×ó¼üË«»÷
+                    emit signalDoubleClicked(modelIndex);
+                }
+            }
 		}
 		break;
 		default:

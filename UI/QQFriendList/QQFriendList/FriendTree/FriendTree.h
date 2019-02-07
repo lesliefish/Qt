@@ -33,7 +33,8 @@ namespace qqfriendlist
 		void initConnection();
 		// 自定义的hover处理
 		void onHoverHandle(const QModelIndex& index, int role);
-
+        // 自定义的点击事件处理
+        void onClickedHandle(const QModelIndex& index, int role);
 	private:
 		QStandardItemModel* m_model{ nullptr }; // model
 		ItemDelegate* m_delegate{ nullptr };

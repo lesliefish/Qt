@@ -27,7 +27,7 @@ namespace qqfriendlist
 		int sex{ 0 };						// 性别 0男 1女
 		QString nickName{};					// 昵称
 		QString id{};						// QQ号
-		QString signature{"nice to meet you .."};// 个性签名
+		QString signature{QStringLiteral("新年快乐，心想事成")};// 个性签名
 		QString headPortrait{};				// 头像路径
 		OnlineState onlineState{ OnlineState::Online }; // 在线状态
 		bool isVip{0};						// VIP类型 0不是vip; 1 vip; 2 svip 
@@ -49,6 +49,7 @@ namespace qqfriendlist
 		IsExpandedRole,					   // 是否收起
 		VideoRole,						   // 视频通话role
 		SignatureRole,					   // 个性签名
+        PortraitRole,                      // 头像列表
 	};
 
 	Q_DECLARE_METATYPE(Contact);

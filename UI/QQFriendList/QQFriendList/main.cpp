@@ -8,7 +8,7 @@ using namespace qqfriendlist;
 namespace
 {
 	// 群组名称
-	std::vector < std::string > groups{ "我的家人", "我的朋友", "我的高中校友", "CSU", "铁道学院" };
+	std::vector < std::string > groups{ "我的家人", "我的朋友", "高中校友", "CSU", "铁道学院" };
 	// 家人数据
 	std::vector < std::string > familys{ "老爸", "老妈", "哥哥", "姑姑", "小姨" };
 	// 朋友数据
@@ -46,7 +46,7 @@ auto createFriendDatas = [&]()
 			group.contactList.emplace_back(std::move(contact));
 		}
 
-		groupList.emplace_back(group);
+		groupList.emplace_back(std::move(group));
 	}
 
 	return groupList;
@@ -60,7 +60,9 @@ int main(int argc, char *argv[])
 	// 传入数据
 	w.setValues(createFriendDatas());
 	w.setMinimumWidth(276);
-	w.resize(276, 450);
+    w.setMaximumWidth(320);
+
+	w.resize(276, 500);
 	w.show();
 	return a.exec();
 }

@@ -36,6 +36,9 @@ namespace qqfriendlist
 
 		// hoverµÄrole
 		virtual int getHoverEventRole(const QPoint& pos, const QStyleOptionViewItem& option, const QModelIndex &index) const;
+
+        // µã»÷µÄrole
+        virtual int getMouseEventRole(const QPoint& pos, const QStyleOptionViewItem& option, const QModelIndex &index) const;
 	};
 
 }

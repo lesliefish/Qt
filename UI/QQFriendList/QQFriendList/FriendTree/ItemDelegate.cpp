@@ -161,7 +161,7 @@ namespace qqfriendlist
 		{
 			QRect onlineStateIconRect(option.rect.left() + kOnlineStateIconRect.x(), option.rect.top() + kOnlineStateIconRect.y(),
 				kOnlineStateIconRect.width(), kOnlineStateIconRect.height());
-			QString onlineStateIconPath{ ":/QQFriendList/Resources/images/online-im.svg" };
+            QString onlineStateIconPath{ ":/QQFriendList/Resources/images/online-im.svg" };
 			switch (info.onlineState)
 			{
 			case OnlineState::Busy:
@@ -180,7 +180,7 @@ namespace qqfriendlist
 			}
 			default:break;
 			}
-			// 防背景透明 先把背景处理了
+			// 防背景透明 先把背景处理了 用背景色backgroundColor画一个圆形区域
 			painter->setPen(Qt::NoPen);
 			painter->setBrush(backgroundColor);
 			painter->drawRoundedRect(onlineStateIconRect, onlineStateIconRect.width()/2, onlineStateIconRect.height()/2);
@@ -243,8 +243,35 @@ namespace qqfriendlist
 			return static_cast<int>(CustomRole::SignatureRole);
 		}
 
+        // 头像
+        QRect contactHeadPortraitRect(option.rect.left() + kContactPortraitRect.x(), option.rect.top() + kContactPortraitRect.y(),
+            kContactPortraitRect.width(), kContactPortraitRect.height());
+        if (!index.data(static_cast<int>(CustomRole::IsGroupRole)).toBool() && contactHeadPortraitRect.contains(pos))
+        {
+            return static_cast<int>(CustomRole::PortraitRole);
+        }
 		return -1;
 	}
+
+    /****************************************!
+     * @brief  返回点击的Item的角色
+     * @param  [in]  const QPoint & pos 
+     * @param  [in]  const QStyleOptionViewItem & option 
+     * @param  [in]  const QModelIndex & index 
+     * @return int  
+     ****************************************/
+    int ItemDelegate::getMouseEventRole(const QPoint& pos, const QStyleOptionViewItem& option, const QModelIndex &index) const
+    {
+        // 视频通话图标位置
+        QRect videoRect(option.rect.left() + option.rect.width() - kVideoIconRect.width() - 16, option.rect.top() + kVideoIconRect.y(),
+            kVideoIconRect.width(), kVideoIconRect.height());
+        if (!index.data(static_cast<int>(CustomRole::IsGroupRole)).toBool() && videoRect.contains(pos))
+        {
+            return static_cast<int>(CustomRole::VideoRole);
+        }
+
+        return -1;
+    }
 
 }
 
