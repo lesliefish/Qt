@@ -78,7 +78,7 @@ namespace qqfriendlist
         {
             if (index.data(static_cast<int>(CustomRole::IsGroupRole)).toBool())
             {
-                setExpanded(index, !isExpanded(index)); // 单机展开//收缩列表
+                setExpanded(index, !isExpanded(index)); // 单击展开/收缩列表
             }
         });
 
@@ -87,7 +87,7 @@ namespace qqfriendlist
         {
             if (!index.data(static_cast<int>(CustomRole::IsGroupRole)).toBool())
             {
-                // 不是分组Item
+                // 不是分组Item才去处理双击事件
                 auto info = index.data(static_cast<int>(CustomRole::ContactRole)).value<Contact>();
                 QMessageBox msgBox;
                 msgBox.setWindowTitle(QStringLiteral("双击打开聊天"));
