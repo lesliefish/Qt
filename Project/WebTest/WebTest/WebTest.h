@@ -19,10 +19,6 @@ class WebTest : public QWidget
 public:
     WebTest(QWidget *parent = Q_NULLPTR);
 
-signals:
-    // JS运行结束
-    void signalRunJsOver();
-
 private:
     void initUi();
     void initConncetion();

@@ -58,3 +58,7 @@ Project/WebTest/.vs/config/applicationhost.config
 UI/QQFriendList/.vs/QQFriendList/v15/.suo
 UI/QQFriendList/.vs/QQFriendList/v14/.suo
 *.db
+/Project/WebTest/WebTest/Debug/qt.txt
+/Project/WebTest/WebTest/GeneratedFiles/Debug/moc_WebTest.cpp
+/Project/WebTest/WebTest/GeneratedFiles/ui_WebTest.h
+/Project/WebTest/WebTest/WebTest.ilk

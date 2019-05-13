@@ -71,8 +71,6 @@ void WebTest::loadHtml()
 QString WebTest::getJsRetString()
 {
     QEventLoop loop;
-    connect(this, &WebTest::signalRunJsOver, &loop, &QEventLoop::quit);
-
     QString jsStr = "getInfo();";
 
     QString retStr{}; // ·µ»ØÖµ
@@ -80,7 +78,7 @@ QString WebTest::getJsRetString()
     m_pWebView->page()->runJavaScript(jsStr, [&](const QVariant &v)
     {
         retStr = v.toString();
-        emit signalRunJsOver();
+        loop.quit();
     });
     loop.exec();
 
