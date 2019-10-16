@@ -63,7 +63,7 @@ bool ExcelManger::Test(QString &path)
     //——————————————读出数据—————————————
     //获取第i行第j列的数据
     //假如是第6行，第6列 对应表中F列6行，即F6
-    QAxObject *range1 = worksheet->querySubObject("Range(QString)", "F6");
+    QAxObject *range1 = worksheet->querySubObject("Range(QString)", "F6:F6");
     QString strRow6Col6 = "";
     strRow6Col6 = range1->property("Value").toString();
     qDebug() << "第6行，第6列的数据为：" + strRow6Col6;
@@ -73,7 +73,7 @@ bool ExcelManger::Test(QString &path)
 
     //—————————————写入数据—————————————
     //获取F6的位置
-    QAxObject *range2 = worksheet->querySubObject("Range(QString)", "F6");
+    QAxObject *range2 = worksheet->querySubObject("Range(QString)", "F6:F6");
     //写入数据, 第6行，第6列
     range2->setProperty("Value", "中共十九大");
     QString newStr = "";
@@ -81,6 +81,7 @@ bool ExcelManger::Test(QString &path)
     qDebug() << "写入数据后，第6行，第6列的数据为：" + newStr;
 
     //!!!!!!!一定要记得close，不然系统进程里会出现n个EXCEL.EXE进程
+    workbook->dynamicCall("Save()");
     workbook->dynamicCall("Close()");
     excel->dynamicCall("Quit()");
     if (excel)
