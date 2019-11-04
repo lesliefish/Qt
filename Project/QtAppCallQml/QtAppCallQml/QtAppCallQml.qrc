@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/QtAppCallQml">
+        <file>Resources/main.qml</file>
+    </qresource>
+</RCC>
