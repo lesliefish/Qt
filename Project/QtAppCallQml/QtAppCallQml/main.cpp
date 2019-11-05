@@ -16,10 +16,10 @@ int main(int argc, char *argv[])
     btn.setText("Change Page 1 Color to lightblue");
     btn.show();
     auto swipeView = w.rootObject()->findChild<QObject*>("swipeViewObj");
+    auto page1 = w.rootObject()->findChild<QObject*>("page1Obj"); // 点击按钮设置page1背景色lightblue
 
     if (swipeView != nullptr)
     {
-        auto page1 = swipeView->findChild<QObject*>("page1Obj"); // 点击按钮设置page1背景色lightblue
         if (page1 != nullptr)
         {
             QObject::connect(&btn, &QPushButton::clicked, [&]

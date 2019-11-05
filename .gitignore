@@ -62,3 +62,6 @@ UI/QQFriendList/.vs/QQFriendList/v14/.suo
 /Project/WebTest/WebTest/GeneratedFiles/Debug/moc_WebTest.cpp
 /Project/WebTest/WebTest/GeneratedFiles/ui_WebTest.h
 /Project/WebTest/WebTest/WebTest.ilk
+Project/QtAppCallQml/.vs/QtAppCallQml/v14/.suo
+*.ilk
+Project/QtAppCallQml/QtAppCallQml/GeneratedFiles/qrc_QtAppCallQml.cpp
