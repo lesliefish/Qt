@@ -88,7 +88,11 @@ void MyWindow::paintEvent(QPaintEvent * event)
     }
     painter.setClipPath(canDrawingPathArea);
 
+    QColor color(Qt::darkRed);
+    color.setAlpha(200);
     painter.setPen(Qt::NoPen);
-    painter.setBrush(QColor(Qt::darkRed));
+    painter.setBrush(color);
     painter.drawRect(rect());
+
+    return QWidget::paintEvent(event);
 }
