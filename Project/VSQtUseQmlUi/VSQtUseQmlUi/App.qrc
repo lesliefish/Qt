@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="App">
+    <qresource prefix="/App">
+        <file>SwipeViewQml.qml</file>
     </qresource>
 </RCC>
