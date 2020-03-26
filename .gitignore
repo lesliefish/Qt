@@ -68,3 +68,4 @@ Project/DrawCircleAngleWindow/.vs/DrawCircleAngleWindow/v14/.suo
 UI/QGraphicsView/QGraphicsViewFramework/.vs/GraphicsViewFramework/v14/.suo
 *.opensdf
 *.sdf
+*.props
