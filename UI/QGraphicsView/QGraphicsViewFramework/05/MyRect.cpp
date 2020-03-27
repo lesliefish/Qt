@@ -6,11 +6,11 @@
 
 void MyRect::keyPressEvent(QKeyEvent *event)
 {
-    if (event->key() == Qt::Key_Left) 
+    if (event->key() == Qt::Key_Left)
     {
         setPos(x() - 10, y());
     }
-    else if (event->key() == Qt::Key_Right) 
+    else if (event->key() == Qt::Key_Right)
     {
         setPos(x() + 10, y());
     }
@@ -22,7 +22,7 @@ void MyRect::keyPressEvent(QKeyEvent *event)
     {
         setPos(x(), y() + 10);
     }
-    else if (event->key() == Qt::Key_Space) 
+    else if (event->key() == Qt::Key_Space)
     {
         // create a bullet
         Bullet * bullet = new Bullet();
