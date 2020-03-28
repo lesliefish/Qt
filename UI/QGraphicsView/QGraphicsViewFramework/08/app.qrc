@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/pic">
+        <file>bullet.png</file>
+        <file>tiger.png</file>
+        <file>player.png</file>
+    </qresource>
+</RCC>
