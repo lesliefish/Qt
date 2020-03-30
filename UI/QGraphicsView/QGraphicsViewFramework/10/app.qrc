@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>tower.png</file>
+        <file>bullet.png</file>
+    </qresource>
+</RCC>
