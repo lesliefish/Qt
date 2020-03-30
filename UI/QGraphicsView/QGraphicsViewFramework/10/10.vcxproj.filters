@@ -11,6 +11,9 @@
     <ClCompile Include="Bullet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resource Files">
@@ -47,6 +50,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="Bullet.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Enemy.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

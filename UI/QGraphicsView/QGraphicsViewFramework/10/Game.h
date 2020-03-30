@@ -11,6 +11,7 @@ public:
 
 	void mousePressEvent(QMouseEvent *event);
 
+	QGraphicsScene* getScene() { return m_scene; }
 private:
 	// member attributes
 	QGraphicsScene * m_scene;

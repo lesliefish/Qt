@@ -13,9 +13,8 @@ Bullet::Bullet(QGraphicsItem *parent){
 }
 
 
-
-
-void Bullet::move(){
+void Bullet::move()
+{
     int STEP_SIZE = 1;
     double theta = rotation(); // degrees
 
