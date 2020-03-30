@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0F6FE976-72EB-4025-951C-52EF2F245413}</ProjectGuid>
+    <ProjectGuid>{292DD3EF-3D9C-45EB-92A2-58FA2767BC1E}</ProjectGuid>
     <Keyword>QtVS_v302</Keyword>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
@@ -42,10 +42,10 @@
   </ImportGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <QtInstall>5.9.6</QtInstall>
-    <QtModules>core;gui;widgets;multimedia</QtModules>
+    <QtModules>core;gui;widgets</QtModules>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <QtInstall>5.9.6</QtInstall>
+    <QtInstall>5.6.0</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
   </PropertyGroup>
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
@@ -79,30 +79,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bullet.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Health.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="Tower.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="Bullet.h" />
+    <QtMoc Include="Tower.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="Enemy.h" />
+    <QtRcc Include="app.qrc">
+      <FileType>Document</FileType>
+    </QtRcc>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Game.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Health.h" />
-    <ClInclude Include="Score.h" />
-    <QtMoc Include="Player.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtRcc Include="app.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

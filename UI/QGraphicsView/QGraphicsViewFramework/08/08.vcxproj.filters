@@ -20,6 +20,15 @@
     <ClInclude Include="Score.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="app.qrc" />
+    <QtRcc Include="app.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
   </ItemGroup>
 </Project>
