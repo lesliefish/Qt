@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files\Widget1">
+      <UniqueIdentifier>{9235618f-1f35-405f-805c-517a21bf9aec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widget2">
+      <UniqueIdentifier>{4032d0d0-9805-46c1-a390-73bac70603b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MainWindow">
+      <UniqueIdentifier>{5e5daba0-37a4-4851-8c35-fd219ae626b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Widget1.cpp">
+      <Filter>Source Files\Widget1</Filter>
+    </ClCompile>
+    <ClCompile Include="Widget2.cpp">
+      <Filter>Source Files\Widget2</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files\MainWindow</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Widget1.h">
+      <Filter>Source Files\Widget1</Filter>
+    </QtMoc>
+    <QtMoc Include="Widget2.h">
+      <Filter>Source Files\Widget2</Filter>
+    </QtMoc>
+    <QtMoc Include="MainWindow.h">
+      <Filter>Source Files\MainWindow</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Widget1.ui">
+      <Filter>Source Files\Widget1</Filter>
+    </QtUic>
+    <QtUic Include="Widget2.ui">
+      <Filter>Source Files\Widget2</Filter>
+    </QtUic>
+    <QtUic Include="MainWindow.ui">
+      <Filter>Source Files\MainWindow</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TranslationSupport.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="apptranslation_en.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="apptranslation_zh.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
