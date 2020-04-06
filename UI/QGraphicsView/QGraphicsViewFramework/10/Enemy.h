@@ -12,11 +12,11 @@ public:
     Enemy(QGraphicsItem * parent=0);
     void rotateToPoint(QPointF p);
 public slots:
-    void moveForward();
+    void move_forward();
 private:
     QList<QPointF> points;
-    QPointF m_dest;
-    int m_pointIndex;
+    QPointF dest;
+    int point_index;
 };
 
 #endif // ENEMY_H

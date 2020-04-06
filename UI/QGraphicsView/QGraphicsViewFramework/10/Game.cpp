@@ -1,33 +1,39 @@
 #include "Game.h"
+#include <QGraphicsScene>
 #include "Tower.h"
-#include "Enemy.h"
 #include "Bullet.h"
-#include <QMouseEvent>
+#include "Enemy.h"
 
-Game::Game(QWidget *parent)
-	: QGraphicsView(parent)
-{
-	m_scene = new QGraphicsScene(this);
-	m_scene->setSceneRect(0, 0, 800,600);
-	setScene(m_scene);
+Game::Game(): QGraphicsView(){
+    // create a scene
+    scene = new QGraphicsScene(this);
+    scene->setSceneRect(0,0,800,600);
 
-	Tower * tower = new Tower();
-	m_scene->addItem(tower);
+    // set the scene
+    setScene(scene);
 
-	setFixedSize(800, 600);
-	setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-	setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    // create a tower
+    Tower * t = new Tower();
+    t->setPos(250,250);
 
-	// create enemy
-	Enemy * enemy = new Enemy();
-	m_scene->addItem(enemy);
+    // add the tower to scene
+    scene->addItem(t);
+
+    // alter window
+    setFixedSize(800,600);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+    // create enemy
+    Enemy * enemy = new Enemy();
+    scene->addItem(enemy);
 }
 
-void Game::mousePressEvent(QMouseEvent *event)
-{
-	Bullet* bullet = new Bullet();
-	bullet->setPos(event->pos());
-	bullet->setRotation(40);
+void Game::mousePressEvent(QMouseEvent *event){
+    //create a bullet
+    Bullet * bullet = new Bullet();
+    bullet->setPos(event->pos());
+    bullet->setRotation(40);
+    scene->addItem(bullet);
 
-	scene()->addItem(bullet);
 }

@@ -1,13 +1,20 @@
-#include <QtWidgets/QApplication>
+#include <QApplication>
 #include "Game.h"
 
-Game* game = nullptr;
+/*
+Tutorial topics:
+QGraphicsItem::collidingItems()
+dynamic_cast<>()
+*/
+
+Game * game;
+
 int main(int argc, char *argv[])
 {
-	QApplication a(argc, argv);
-	
-	game = new Game();
-	game->show();
-	
-	return a.exec();
+    QApplication a(argc, argv);
+
+    game = new Game();
+    game->show();
+
+    return a.exec();
 }

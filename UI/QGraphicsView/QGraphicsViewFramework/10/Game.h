@@ -1,18 +1,17 @@
-#pragma once
+#ifndef GAME_H
+#define GAME_H
 
 #include <QGraphicsView>
+#include <QMouseEvent>
 
-class Game : public QGraphicsView
-{
-	Q_OBJECT
-
+class Game: public QGraphicsView{
 public:
-	Game(QWidget *parent = Q_NULLPTR);
+    // member functions
+    Game();
+    void mousePressEvent(QMouseEvent *event);
 
-	void mousePressEvent(QMouseEvent *event);
-
-	QGraphicsScene* getScene() { return m_scene; }
-private:
-	// member attributes
-	QGraphicsScene * m_scene;
+    // member attributes
+    QGraphicsScene * scene;
 };
+
+#endif // GAME_H
